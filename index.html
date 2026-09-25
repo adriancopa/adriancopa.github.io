@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adrian Copa · Gerente de Operaciones | Consumo masivo</title>
+  <meta name="description" content="Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles: 3,5x facturación, Bs 190K de caja liberada, -90% en fallas de calidad." />
+  <meta property="og:title" content="Adrian Copa · Transformo procesos ineficientes en resultados medibles" />
+  <meta property="og:description" content="Gerente de Operaciones en consumo masivo. 3,5x facturación · Bs 190K de caja liberada · -90% fallas de calidad." />
+  <meta property="og:image" content="assets/foto-perfil.jpg" />
+  <link rel="icon" href="assets/foto-perfil.jpg" />
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f5f2;
+      --bg-2: #eeece7;
+      --card: #ffffff;
+      --ink: #0f1b2d;
+      --ink-2: #26344a;
+      --muted: #5b6472;
+      --line: #e3e1db;
+      --navy: #0f1b2d;
+      --navy-2: #172740;
+      --accent: #e0622f;
+      --accent-dk: #c7511f;
+      --accent-soft: #fbe9e0;
+      --green: #1f9d57;
+      --head: 'Manrope', system-ui, sans-serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max: 1180px;
+      --ease: cubic-bezier(.2,.7,.2,1);
+      --radius: 18px;
+      --shadow: 0 1px 2px rgba(15,27,45,.04), 0 12px 32px -18px rgba(15,27,45,.25);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3, h4 { font-family: var(--head); letter-spacing: -.025em; line-height: 1.1; }
+    h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 800; }
+    .hl { color: var(--accent); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--head); font-weight: 700; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .eyebrow::before { content: ''; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }
+    .sec-head { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: end; margin-bottom: 48px; }
+    .sec-head p { color: var(--muted); font-size: 17px; max-width: 470px; justify-self: end; }
+    section { padding: 100px 0; position: relative; }
+
+    .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- buttons ---------- */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 24px; border-radius: 12px; font-family: var(--head); font-size: 15px; font-weight: 700; transition: transform .25s var(--ease), background .2s, border-color .2s, box-shadow .25s; border: 1.5px solid transparent; white-space: nowrap; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary { position: relative; overflow: hidden; background: linear-gradient(135deg, #f2743d, var(--accent) 45%, #c94d1c); color: #fff; box-shadow: 0 14px 30px -12px rgba(224,98,47,.8), inset 0 1px 0 rgba(255,255,255,.25); }
+    .btn-primary:hover { box-shadow: 0 18px 38px -12px rgba(224,98,47,.95), inset 0 1px 0 rgba(255,255,255,.25); }
+    /* light sweep that invites the click */
+    .btn-primary::after, .btn-wa::after, .btn-li::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-20deg); animation: shine 3.6s ease-in-out infinite; pointer-events: none; }
+    @keyframes shine { 0%, 55% { left: -60%; } 80%, 100% { left: 130%; } }
+    .btn-lg { padding: 17px 28px; font-size: 16.5px; border-radius: 14px; }
+    .btn-pulse { animation: ring 2.4s ease-out infinite; }
+    @keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(224,98,47,.55), 0 14px 30px -12px rgba(224,98,47,.8); } 70%, 100% { box-shadow: 0 0 0 16px rgba(224,98,47,0), 0 14px 30px -12px rgba(224,98,47,.8); } }
+    .btn-li { position: relative; overflow: hidden; background: #0a66c2; color: #fff; box-shadow: 0 14px 30px -14px rgba(10,102,194,.8); }
+    .btn-li:hover { background: #0958a8; }
+    .btn .arr { display: inline-block; transition: transform .25s var(--ease); }
+    .btn:hover .arr { transform: translateX(4px); }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: var(--ink-2); }
+    .btn-ghost { border-color: var(--line); background: var(--card); color: var(--ink); }
+    .btn-ghost:hover { border-color: var(--ink); }
+    .btn-wa { position: relative; overflow: hidden; background: #25d366; color: #06301a; box-shadow: 0 14px 30px -14px rgba(37,211,102,.9); }
+    .btn-wa:hover { background: #33e074; }
+    .link-arrow { font-family: var(--head); font-weight: 700; font-size: 14.5px; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
+    .link-arrow span { transition: transform .2s; }
+    .link-arrow:hover span { transform: translateX(4px); }
+
+    /* ---------- header ---------- */
+    .progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); z-index: 70; }
+    header.nav { position: sticky; top: 0; z-index: 60; background: rgba(246,245,242,.88); backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
+    header.nav.scrolled { border-bottom-color: var(--line); box-shadow: 0 8px 24px -20px rgba(15,27,45,.4); }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; }
+    .brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+    .brand b { display: block; font-family: var(--head); font-weight: 800; font-size: 15.5px; line-height: 1.2; }
+    .brand small { display: block; font-size: 12px; color: var(--muted); line-height: 1.2; }
+    .nav-links { display: flex; gap: 4px; font-family: var(--head); font-weight: 600; font-size: 14px; }
+    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--ink-2); transition: background .2s, color .2s; }
+    .nav-links a:hover { background: var(--bg-2); }
+    .nav-links a.active { background: var(--ink); color: #fff; }
+    /* mobile section chips — always visible so every section is discoverable */
+    .chips { display: none; gap: 8px; overflow-x: auto; padding: 0 16px 12px; scrollbar-width: none; }
+    .chips::-webkit-scrollbar { display: none; }
+    .chips a { flex: none; font-family: var(--head); font-weight: 700; font-size: 13px; padding: 8px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink-2); transition: background .2s, color .2s, border-color .2s; }
+    .chips a.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 56px 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+    .hello { display: flex; align-items: center; gap: 12px; font-family: var(--head); font-weight: 700; font-size: 18px; color: var(--ink-2); }
+    .hello img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; display: none; border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent); }
+    .hello .hi { font-weight: 500; color: var(--muted); }
+    .role-pill { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 7px 14px 7px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; font-weight: 500; color: var(--ink-2); box-shadow: var(--shadow); }
+    .live { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(31,157,87,.16); flex: none; animation: pulse 2.4s infinite; }
+    @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(31,157,87,.04); } }
+    .hero h1 { font-size: clamp(40px, 5.6vw, 72px); font-weight: 800; letter-spacing: -.035em; line-height: 1.02; margin: 22px 0 20px; }
+    .hero h1 .hl { position: relative; white-space: nowrap; }
+    .hero h1 .hl::after { content: ''; position: absolute; left: 0; right: 0; bottom: .04em; height: .14em; background: var(--accent); opacity: .22; border-radius: 4px; transform-origin: left; transform: scaleX(0); animation: underline 1s var(--ease) .6s forwards; }
+    @keyframes underline { to { transform: scaleX(1); } }
+    .lead { font-size: 18.5px; color: var(--ink-2); max-width: 560px; }
+    .lead b { font-weight: 600; color: var(--ink); }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; max-width: 580px; }
+    .kpi { position: relative; height: 128px; perspective: 600px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+    .face { position: absolute; inset: 0; padding: 14px 16px 18px; display: flex; flex-direction: column; opacity: 0; transform: rotateX(-80deg); transform-origin: 50% 0; transition: opacity .45s, transform .6s var(--ease); backface-visibility: hidden; }
+    .face.on { opacity: 1; transform: none; }
+    .face.out { opacity: 0; transform: rotateX(80deg); transform-origin: 50% 100%; }
+    .face b { display: block; font-family: var(--head); font-weight: 800; font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -.03em; color: var(--ink); line-height: 1.1; white-space: nowrap; }
+    .face b em { font-style: normal; color: var(--accent); }
+    .face span { font-size: 12.5px; color: var(--muted); line-height: 1.35; display: block; margin-top: 4px; }
+    .face i { margin-top: auto; align-self: flex-start; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--ink-2); background: var(--bg-2); padding: 2px 8px; border-radius: 6px; }
+    .tick { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+    .tick.run { animation: tick 3.6s linear forwards; }
+    @keyframes tick { to { transform: scaleX(1); } }
+    .more-proof { display: inline-flex; gap: 6px; margin-top: 14px; font-family: var(--head); font-weight: 700; font-size: 14.5px; color: var(--accent); }
+    .more-proof span { transition: transform .2s; }
+    .more-proof:hover span { transform: translateX(4px); }
+
+    .visual { position: relative; perspective: 1200px; }
+    .photo-card { position: relative; border-radius: 24px; overflow: hidden; background: var(--navy); box-shadow: 0 40px 80px -34px rgba(15,27,45,.6); transform-style: preserve-3d; transition: transform .6s var(--ease); }
+    .photo-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .photo-cap { position: absolute; left: 14px; right: 14px; bottom: 14px; padding: 13px 16px; border-radius: 14px; background: rgba(12,20,34,.72); backdrop-filter: blur(10px); color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .photo-cap b { display: block; font-family: var(--head); font-weight: 800; font-size: 16px; }
+    .photo-cap small { font-size: 12.5px; color: #c5ccd8; }
+    .photo-cap .status { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; color: #bfeccf; white-space: nowrap; }
+    /* skill badges floating around the photo */
+    .badge { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 11px 14px; border-radius: 14px; background: var(--card); box-shadow: 0 18px 40px -16px rgba(15,27,45,.45); border: 1px solid var(--line); animation: float 6s ease-in-out infinite; }
+    .badge { min-width: 230px; transition: opacity .35s, transform .35s var(--ease); }
+    .badge .in-b { display: flex; align-items: center; gap: 10px; transition: opacity .35s, transform .45s var(--ease); }
+    .badge .in-b.swap { opacity: 0; transform: translateY(8px) rotateX(40deg); }
+    .badge .ic { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--c-bg, var(--accent-soft)); color: var(--c, var(--accent)); flex: none; transition: background .35s, color .35s; }
+    .badge .dots { position: absolute; right: 10px; top: 8px; display: flex; gap: 3px; }
+    .badge .dots i { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
+    .badge .dots i.on { background: var(--accent); }
+    .badge .ic svg { width: 19px; height: 19px; }
+    .badge b { display: block; font-family: var(--head); font-weight: 800; font-size: 14px; line-height: 1.2; }
+    .badge small { display: block; font-size: 12px; color: var(--muted); line-height: 1.25; }
+    .badge.b1 { top: 8%; left: -12%; }
+    .badge.b2 { top: 44%; right: -10%; animation-delay: -2s; }
+    .badge.b3 { bottom: 20%; left: -14%; animation-delay: -4s; }
+    @keyframes float { 50% { transform: translateY(-10px); } }
+
+    /* explore tiles */
+    .explore { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 56px; }
+    .tile { display: flex; align-items: center; gap: 14px; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); transition: transform .3s var(--ease), border-color .2s, box-shadow .3s; }
+    .tile:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 20px 40px -22px rgba(224,98,47,.55); }
+    .tile .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--ink); color: #fff; flex: none; }
+    .tile .ic svg { width: 21px; height: 21px; }
+    .tile b { display: block; font-family: var(--head); font-weight: 800; font-size: 15px; line-height: 1.25; }
+    .tile small { font-size: 12.5px; color: var(--muted); }
+    .tile .go { margin-left: auto; color: var(--accent); font-weight: 700; transition: transform .2s; }
+    .tile:hover .go { transform: translateX(4px); }
+
+    /* ---------- trust strip ---------- */
+    .trust { padding: 34px 0; border-block: 1px solid var(--line); background: var(--card); }
+    .trust-in { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: space-between; }
+    .trust p { font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+    .logos { display: flex; gap: 44px; flex-wrap: wrap; align-items: center; }
+    .logos span { font-family: var(--head); font-weight: 800; font-size: 22px; letter-spacing: -.02em; color: #8a909a; transition: color .2s; }
+    .logos span:hover { color: var(--ink); }
+
+    /* ---------- services ---------- */
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .svc { position: relative; display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .35s var(--ease), border-color .25s, box-shadow .35s; }
+    .art { background: linear-gradient(160deg, var(--a), var(--b)); padding: 14px 14px 0; overflow: hidden; }
+    .art svg { display: block; width: 100%; height: auto; transition: transform .6s var(--ease); transform-origin: 50% 100%; }
+    .svc:hover .art svg { transform: scale(1.05); }
+    .svc-body { padding: 22px 26px 26px; display: flex; flex-direction: column; flex: 1; }
+    .proofs { list-style: none; margin-top: 18px; padding-top: 16px; border-top: 1px dashed #d8d3c8; display: grid; gap: 10px; }
+    .proofs li { display: grid; grid-template-columns: 84px minmax(0, 1fr); column-gap: 10px; align-items: baseline; }
+    .proofs b { font-family: var(--head); font-weight: 800; font-size: 19px; color: var(--accent); letter-spacing: -.02em; line-height: 1.2; }
+    .proofs span { font-size: 13.5px; color: var(--ink-2); line-height: 1.35; }
+    .proofs { margin-bottom: 18px; }
+    .svc-cta { margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 12px; font-family: var(--head); font-weight: 700; font-size: 14.5px; color: var(--accent); background: var(--accent-soft); transition: background .25s, color .25s; }
+    .svc-cta span { transition: transform .25s var(--ease); }
+    .svc-cta:hover { background: var(--accent); color: #fff; }
+    .svc-cta:hover span { transform: translateX(4px); }
+    .proofs i { grid-column: 2; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+    .svc:hover { transform: translateY(-6px); border-color: #d9d4ca; box-shadow: 0 30px 60px -30px rgba(15,27,45,.35); }
+    .svc .ic { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 18px; }
+    .svc .ic svg { width: 24px; height: 24px; }
+    .svc .pain { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+    .svc h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+    .svc p { color: var(--muted); font-size: 15px; }
+    .proof { margin-top: auto; padding-top: 20px; }
+    .proof div { display: flex; align-items: baseline; gap: 10px; padding: 14px 16px; border-radius: 12px; background: var(--bg); border: 1px dashed #d8d3c8; }
+    .proof b { font-family: var(--head); font-weight: 800; font-size: 24px; color: var(--accent); letter-spacing: -.02em; white-space: nowrap; }
+    .proof span { font-size: 13px; color: var(--ink-2); line-height: 1.35; }
+    .proof small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 8px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+    .sec-cta { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 36px; padding: 22px 26px; border-radius: var(--radius); background: var(--ink); color: #fff; flex-wrap: wrap; }
+    .sec-cta p { font-family: var(--head); font-weight: 700; font-size: 18px; }
+    .sec-cta p span { color: #aab4c4; font-weight: 500; font-size: 15px; display: block; }
+
+    /* ---------- numbers band ---------- */
+    .band { background: var(--navy); color: #fff; padding: 80px 0; overflow: hidden; position: relative; }
+    .band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(700px 320px at 85% -10%, rgba(224,98,47,.28), transparent 70%), radial-gradient(600px 300px at 0% 110%, rgba(80,120,200,.18), transparent 70%); }
+    .band .wrap { position: relative; }
+    .band h2 { color: #fff; margin-bottom: 42px; max-width: 760px; }
+    .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,.1); border-radius: var(--radius); overflow: hidden; }
+    .n { background: var(--navy); padding: 28px 24px; display: flex; flex-direction: column; transition: background .3s; }
+    .n:hover { background: var(--navy-2); }
+    .n.hide { display: none; }
+    .n i { margin-top: 14px; align-self: flex-start; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #ffb38f; background: rgba(224,98,47,.14); padding: 3px 9px; border-radius: 6px; }
+    .n-cta { background: linear-gradient(150deg, #243a5e, var(--navy)); }
+    .n-cta b { font-size: 30px !important; }
+    .n-cta .btn { margin-top: 16px; align-self: flex-start; }
+    .filter { display: flex; flex-wrap: wrap; gap: 8px; margin: -18px 0 26px; }
+    .filter button { font-family: var(--head); font-weight: 700; font-size: 13.5px; padding: 8px 15px; border-radius: 999px; color: #c5ccd8; border: 1px solid rgba(255,255,255,.18); transition: background .2s, color .2s, border-color .2s; }
+    .filter button:hover { border-color: #fff; color: #fff; }
+    .filter button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .n b { display: block; font-family: var(--head); font-weight: 800; font-size: clamp(38px, 4.6vw, 56px); letter-spacing: -.04em; line-height: 1; }
+    .n b em { font-style: normal; color: var(--accent); }
+    .n p { color: #aab4c4; font-size: 14.5px; margin-top: 10px; max-width: 280px; }
+    .n p strong { color: #fff; font-weight: 600; }
+
+    /* ---------- cases ---------- */
+    .cases { display: grid; gap: 18px; }
+    .case { display: grid; grid-template-columns: 220px minmax(0, 1fr); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: box-shadow .3s, transform .35s var(--ease); }
+    .case:hover { box-shadow: 0 30px 60px -32px rgba(15,27,45,.4); transform: translateY(-3px); }
+    .case-fig { background: var(--ink); color: #fff; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
+    .case-fig b { font-family: var(--head); font-weight: 800; font-size: 50px; letter-spacing: -.04em; line-height: 1; color: var(--accent); }
+    .case-fig span { font-size: 14px; color: #c5ccd8; line-height: 1.4; }
+    .case-fig small { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; opacity: .7; }
+    .case-body { padding: 28px 30px; }
+    .case-body h3 { font-size: 23px; font-weight: 800; margin-bottom: 16px; }
+    .steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .steps3 div { border-top: 2px solid var(--line); padding-top: 12px; }
+    .steps3 div:last-child { border-top-color: var(--accent); }
+    .steps3 h4 { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .steps3 div:last-child h4 { color: var(--accent); }
+    .steps3 p { font-size: 14.5px; color: var(--ink-2); }
+
+    /* ---------- method ---------- */
+    #metodo { background: var(--card); border-block: 1px solid var(--line); }
+    .method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; position: relative; }
+    .method::before { content: ''; position: absolute; top: 27px; left: 8%; right: 8%; height: 2px; background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 14px); }
+    .step { position: relative; }
+    .step .num { width: 56px; height: 56px; border-radius: 50%; background: var(--card); border: 2px solid var(--ink); display: grid; place-items: center; font-family: var(--head); font-weight: 800; font-size: 18px; margin-bottom: 18px; position: relative; transition: background .3s, color .3s, border-color .3s; }
+    .step:hover .num { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .step h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+    .step p { font-size: 15px; color: var(--muted); }
+    .quote { margin-top: 64px; display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; padding: 34px; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); }
+    .quote img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; }
+    .quote blockquote { font-family: var(--head); font-weight: 700; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.3; letter-spacing: -.02em; }
+    .quote cite { display: block; margin-top: 10px; font-style: normal; font-size: 14px; color: var(--muted); }
+
+    /* ---------- offers ---------- */
+    .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+    .offer { display: flex; flex-direction: column; padding: 30px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s var(--ease), box-shadow .35s; }
+    .offer:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(15,27,45,.4); }
+    .offer.featured { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .offer .for { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+    .offer h3 { font-size: 25px; font-weight: 800; margin: 10px 0 10px; }
+    .offer > p { font-size: 15px; color: var(--muted); }
+    .offer.featured > p { color: #aab4c4; }
+    .offer ul { list-style: none; margin: 20px 0 26px; display: grid; gap: 10px; }
+    .offer li { display: flex; gap: 10px; font-size: 14.5px; }
+    .offer li::before { content: '✓'; color: var(--accent); font-weight: 800; flex: none; }
+    .offer .btn { margin-top: auto; }
+    .tag-pop { align-self: flex-start; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--accent); color: #fff; margin-bottom: 14px; }
+
+    /* ---------- timeline ---------- */
+    .timeline { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .job { display: grid; grid-template-columns: 200px minmax(0, 1fr) 36px; gap: 28px; padding: 24px 28px; border-bottom: 1px solid var(--line); cursor: pointer; transition: background .25s; }
+    .job:last-child { border-bottom: 0; }
+    .job:hover { background: #fbfaf8; }
+    .job .when { font-size: 13px; font-weight: 600; color: var(--muted); padding-top: 5px; }
+    .job h3 { font-size: 21px; font-weight: 800; }
+    .job .org { color: var(--muted); font-size: 15px; margin-top: 2px; }
+    .job .org b { color: var(--ink); font-weight: 600; }
+    .job .hit { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; }
+    .job .plus { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px; color: var(--muted); transition: transform .35s var(--ease), background .3s, color .3s, border-color .3s; }
+    .job.open .plus { transform: rotate(45deg); background: var(--ink); border-color: var(--ink); color: #fff; }
+    .job .detail { grid-column: 2 / 3; display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease); }
+    .job.open .detail { grid-template-rows: 1fr; }
+    .job .detail > div { overflow: hidden; }
+    .job ul { list-style: none; padding-top: 14px; display: grid; gap: 9px; }
+    .job li { position: relative; padding-left: 20px; color: var(--ink-2); font-size: 15px; }
+    .job li::before { content: ''; position: absolute; left: 2px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .job-sub { font-size: 13px; color: var(--muted); padding-top: 12px; }
+
+    /* ---------- books ---------- */
+    #libros { background: var(--navy); color: #fff; overflow: hidden; }
+    #libros::before { content: ''; position: absolute; inset: 0; background: radial-gradient(800px 360px at 50% 100%, rgba(224,98,47,.22), transparent 70%); pointer-events: none; }
+    #libros .sec-head p { color: #aab4c4; }
+    .shelf { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; perspective: 1800px; }
+    .book-wrap { display: flex; flex-direction: column; align-items: center; }
+    .book { position: relative; width: min(190px, 88%); transform-style: preserve-3d; transform: rotateY(24deg) rotateX(3deg); transition: transform .8s var(--ease); cursor: pointer; }
+    .book-wrap:hover .book, .book:focus, .book-wrap.front .book { transform: rotateY(-5deg) translateZ(40px) translateY(-8px); }
+    .book .cover { width: 100%; border-radius: 2px 5px 5px 2px; box-shadow: 18px 24px 40px -10px rgba(0,0,0,.6); transform: translateZ(13px); }
+    .book .spine { position: absolute; top: 0; bottom: 0; left: 0; width: 26px; background: linear-gradient(90deg, rgba(255,255,255,.14), transparent 40%, rgba(0,0,0,.28)), var(--spine); transform-origin: left; transform: translateZ(13px) rotateY(90deg); }
+    .book .pages { position: absolute; top: 3px; bottom: 3px; right: 0; width: 24px; background: repeating-linear-gradient(90deg, #f3eee4 0 1px, #d9d2c4 1px 2px); transform-origin: right; transform: translateZ(13px) rotateY(-90deg); }
+    .book .back { position: absolute; inset: 0; background: var(--spine); transform: translateZ(-13px); border-radius: 2px 5px 5px 2px; }
+    .book-shadow { width: 80%; height: 16px; background: radial-gradient(ellipse, rgba(0,0,0,.5), transparent 70%); margin-top: -4px; }
+    .book-info { text-align: center; margin-top: 20px; }
+    .book-info .plat { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; color: var(--accent); text-transform: uppercase; }
+    .book-info h3 { font-size: 18px; font-weight: 800; margin: 6px 0 6px; color: #fff; }
+    .book-info p { font-size: 13.5px; color: #aab4c4; }
+    .book-info a { display: inline-flex; margin-top: 12px; font-family: var(--head); font-weight: 700; font-size: 13.5px; padding: 9px 16px; border-radius: 10px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); transition: background .2s, border-color .2s; }
+    .book-info a:hover { background: var(--accent); border-color: var(--accent); }
+
+    /* ---------- blog ---------- */
+    #blog { background: var(--card); border-block: 1px solid var(--line); }
+    .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .post { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg); transition: transform .35s var(--ease), box-shadow .35s, border-color .25s; }
+    .post:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(15,27,45,.4); border-color: #d9d4ca; }
+    .post .thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy); }
+    .post .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; transition: transform .8s var(--ease); }
+    .post:hover .thumb img { transform: scale(1.06); }
+    .post .src { position: absolute; left: 12px; top: 12px; display: flex; gap: 6px; }
+    .post .src span { font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--ink); }
+    .post .src span.li { background: #0a66c2; color: #fff; }
+    .post .src span.tt { background: #111; color: #fff; }
+    .post-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+    .post time { font-size: 12.5px; font-weight: 600; color: var(--muted); }
+    .post h3 { font-size: 19px; font-weight: 800; margin: 6px 0 8px; }
+    .post p { font-size: 14.5px; color: var(--muted); }
+    .post .read { margin-top: auto; padding-top: 14px; }
+    .topics { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 24px; }
+    .topics-label { font-size: 13.5px; font-weight: 600; color: var(--muted); margin-right: 4px; }
+    .topics a { display: inline-flex; align-items: center; gap: 6px; font-family: var(--head); font-weight: 700; font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c1); transition: transform .2s, box-shadow .2s; }
+    .topics a:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -14px rgba(15,27,45,.5); }
+    .topics a b { color: var(--c1); }
+    .post .cover { position: absolute; inset: 0; padding: 18px 20px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; background: radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,.22), transparent 55%), linear-gradient(150deg, var(--c1), var(--c2)); }
+    .post .cover::before { content: '“'; position: absolute; right: 16px; top: -18px; font: 800 120px/1 var(--head); opacity: .18; }
+    .post .cover b { font-family: var(--head); font-weight: 800; font-size: 17px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .li-cta { margin-top: 30px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 22px 26px; border-radius: var(--radius); background: linear-gradient(120deg, #eaf3fd, #f6f9fe); border: 1px solid #cfe2f7; }
+    .li-who { display: flex; align-items: center; gap: 12px; }
+    .li-who img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid #0a66c2; }
+    .li-who b { display: block; font-family: var(--head); font-weight: 800; }
+    .li-who span { font-size: 13px; color: var(--muted); }
+    .li-cta > p { font-family: var(--head); font-weight: 700; font-size: 17px; color: var(--ink); }
+    .li-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* ---------- tiktok ---------- */
+    .tt-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 36px; flex-wrap: wrap; }
+    .tt-head p { color: var(--muted); font-size: 17px; max-width: 520px; margin-top: 14px; }
+    .tt-actions { display: flex; gap: 10px; align-items: center; }
+    .tt-nav button { width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); display: grid; place-items: center; font-weight: 700; transition: border-color .2s; }
+    .tt-nav button:hover { border-color: var(--ink); }
+    .tt-nav { display: flex; gap: 8px; }
+    .reel { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 24px 26px; margin: 0 -24px; scrollbar-width: none; }
+    .reel::-webkit-scrollbar { display: none; }
+    .clip { flex: 0 0 clamp(210px, 21vw, 240px); scroll-snap-align: start; position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #222; box-shadow: 0 24px 40px -26px rgba(15,27,45,.7); text-align: left; }
+    .clip img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+    .clip:hover img { transform: scale(1.06); }
+    .clip::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(12,12,14,.8) 58%, rgba(12,12,14,.97) 78%); }
+    .clip .chip { position: absolute; top: 12px; left: 12px; z-index: 2; font-size: 11px; font-weight: 700; background: var(--accent); color: #fff; padding: 4px 9px; border-radius: 999px; }
+    .clip .play { position: absolute; top: 42%; left: 50%; z-index: 2; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(255,255,255,.25); backdrop-filter: blur(8px); display: grid; place-items: center; transition: transform .3s var(--ease), background .3s; }
+    .clip:hover .play { transform: scale(1.12); background: var(--accent); }
+    .clip .play svg { width: 20px; height: 20px; margin-left: 3px; color: #fff; }
+    .clip .cap { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2; color: #fff; font-size: 14px; line-height: 1.35; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    .tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--bg-2); margin-bottom: 20px; }
+    .tabs button { display: inline-flex; align-items: center; gap: 8px; font-family: var(--head); font-weight: 700; font-size: 14px; padding: 9px 16px; border-radius: 9px; color: var(--ink-2); transition: background .2s, color .2s; }
+    .tabs button.on { background: var(--ink); color: #fff; }
+    .live-feed { display: flex; flex-direction: column; align-items: center; }
+    .live-feed[hidden], .reel[hidden] { display: none; }
+    .live-note { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+    dialog.player { border: 0; padding: 0; background: transparent; margin: auto; overflow: visible; }
+    dialog.player::backdrop { background: rgba(10,14,22,.85); backdrop-filter: blur(6px); }
+    dialog.player .frame { width: min(340px, 88vw); aspect-ratio: 9 / 16; max-height: 84vh; border-radius: 18px; overflow: hidden; background: #000; }
+    dialog.player iframe { width: 100%; height: 100%; border: 0; }
+    dialog.player .close { position: absolute; top: -14px; right: -14px; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 22px; display: grid; place-items: center; }
+    dialog.player .open-tt { display: block; text-align: center; margin-top: 14px; color: #dfe4ec; font-size: 13.5px; }
+
+    /* ---------- education ---------- */
+    #formacion { background: var(--bg-2); }
+    .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .area { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); }
+    .area b { font-family: var(--head); font-weight: 800; font-size: 34px; color: var(--accent); letter-spacing: -.03em; line-height: 1; }
+    .area h4 { font-size: 16px; font-weight: 800; margin: 10px 0 6px; }
+    .area p { font-size: 14px; color: var(--muted); }
+    .certs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .certs span { font-size: 13.5px; font-weight: 500; padding: 8px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); }
+    .certs span b { font-weight: 700; }
+
+    /* ---------- contact ---------- */
+    .contact { background: var(--navy); color: #fff; padding: 110px 0 44px; overflow: hidden; }
+    .contact::before { content: ''; position: absolute; inset: 0; background: radial-gradient(700px 360px at 50% 0%, rgba(224,98,47,.25), transparent 70%); }
+    .contact .wrap { position: relative; }
+    .contact-card { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: center; }
+    .contact h2 { color: #fff; font-size: clamp(36px, 5vw, 60px); }
+    .contact .sub { color: #c5ccd8; font-size: 18px; margin-top: 18px; max-width: 560px; }
+    .contact .who { display: flex; align-items: center; gap: 14px; margin-top: 28px; }
+    .contact .who img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
+    .contact .who b { display: block; font-family: var(--head); font-weight: 800; }
+    .contact .who span { font-size: 13.5px; color: #aab4c4; }
+    .contact-actions { display: grid; gap: 12px; }
+    .contact-actions .btn { width: 100%; padding: 17px 22px; font-size: 16px; }
+    .contact .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.18); color: #fff; }
+    .contact .btn-ghost:hover { border-color: #fff; }
+    .channels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 70px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); }
+    .channels a { transition: color .2s; overflow-wrap: anywhere; font-size: 15px; }
+    .channels a:hover { color: var(--accent); }
+    .channels small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: #7f8aa0; margin-bottom: 4px; }
+    footer { margin-top: 50px; font-size: 13px; color: #7f8aa0; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+    /* ---------- mobile sticky CTA ---------- */
+    .mbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 80; display: none; gap: 10px; padding: 10px; border-radius: 16px; background: rgba(15,27,45,.92); backdrop-filter: blur(12px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5); transform: translateY(140%); transition: transform .45s var(--ease); }
+    .mbar.show { transform: none; }
+    .mbar .btn { flex: 1; padding: 13px 12px; font-size: 14px; }
+    .mbar .btn-ghost { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff; flex: 0 0 auto; }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 1060px) {
+      .badge.b1, .badge.b3 { left: -6%; }
+      .badge.b2 { right: -6%; }
+    }
+    @media (max-width: 960px) {
+      html { scroll-padding-top: 124px; }
+      .nav-links { display: none; }
+      .chips { display: flex; }
+      section { padding: 72px 0; }
+      .hero { padding: 22px 0 28px; }
+      .hero-grid, .sec-head, .contact-card { grid-template-columns: 1fr; }
+      .visual { display: none; }
+      .hello img { display: block; }
+      .sec-head { gap: 14px; margin-bottom: 32px; }
+      .sec-head p { justify-self: start; }
+      .explore { grid-template-columns: 1fr 1fr; margin-top: 30px; }
+      .services, .offers { grid-template-columns: 1fr 1fr; }
+      .nums { grid-template-columns: 1fr 1fr; }
+      .case { grid-template-columns: 1fr; }
+      .case-fig { flex-direction: row; align-items: center; justify-content: flex-start; }
+      .method { grid-template-columns: 1fr 1fr; row-gap: 30px; }
+      .method::before { display: none; }
+      .shelf { grid-template-columns: 1fr 1fr; row-gap: 44px; }
+      .posts { grid-template-columns: 1fr 1fr; }
+      .posts .post:nth-child(3) { display: none; }
+      .li-cta { grid-template-columns: 1fr; gap: 14px; }
+      .edu-grid { grid-template-columns: 1fr 1fr; }
+      .channels { grid-template-columns: 1fr 1fr; }
+      .mbar { display: flex; }
+      .contact { padding-bottom: 110px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 16px; }
+      .reel { padding: 6px 16px 26px; margin: 0 -16px; }
+      .hero-copy { display: flex; flex-direction: column; }
+      .hero-copy .kpis, .hero-copy .more-proof { order: 1; }
+      .hero-copy .kpis { margin-top: 18px; }
+      .hero-copy .more-proof { margin-top: 10px; }
+      .hero-copy .cta { order: 2; margin-top: 16px; }
+      .hero-copy .role-pill { align-self: flex-start; font-size: 12.5px; }
+      .hello { font-size: 16px; }
+      .hello img { width: 44px; height: 44px; }
+      .hero h1 { font-size: clamp(32px, 9vw, 42px); margin: 14px 0 12px; }
+      .hero h1 .hl { white-space: normal; }
+      .lead { font-size: 16.5px; }
+      .cta { margin-top: 22px; }
+      .cta { flex-wrap: nowrap; gap: 8px; }
+      .cta .btn { flex: 1 1 0; padding: 12px 10px; font-size: 14px; white-space: normal; text-align: center; line-height: 1.25; }
+      .kpis { gap: 8px; margin-top: 22px; }
+      .kpi { height: 132px; }
+      .face { padding: 12px 10px 16px; }
+      .face span { font-size: 11.5px; }
+      .face b { font-size: 21px; }
+      .face i { font-size: 10px; padding: 2px 6px; }
+      .explore { gap: 10px; }
+      .tile { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px; }
+      .tile .go { display: none; }
+      .trust-in { gap: 14px; }
+      .logos { gap: 10px 24px; }
+      .logos span { font-size: 17px; }
+      .services, .offers, .edu-grid, .channels { grid-template-columns: 1fr; }
+      .posts { grid-template-columns: 1fr; }
+      .posts .post:nth-child(3) { display: flex; }
+      .li-actions .btn { flex: 1 1 100%; }
+      .n { padding: 18px 14px; }
+      .n b { font-size: 30px; }
+      .n p { font-size: 13px; }
+      .n-cta { grid-column: 1 / -1; }
+      .filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: -16px; padding-right: 16px; }
+      .filter button { flex: none; }
+      .steps3 { grid-template-columns: 1fr; gap: 12px; }
+      .case-body { padding: 22px; }
+      .case-fig b { font-size: 40px; }
+      .method { grid-template-columns: 1fr; }
+      .quote { grid-template-columns: 1fr; padding: 24px; }
+      .job { grid-template-columns: minmax(0, 1fr) 36px; gap: 4px 14px; padding: 20px; }
+      .job .when { grid-column: 1 / -1; padding-top: 0; }
+      .job .detail { grid-column: 1 / -1; }
+      .shelf { gap: 36px 14px; }
+      .book-info h3 { font-size: 15.5px; }
+      .book-info p { display: none; }
+      .sec-cta { padding: 20px; }
+      .sec-cta .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+      html { scroll-behavior: auto; }
+      .js .reveal { opacity: 1; transform: none; }
+      .hero h1 .hl::after { transform: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><img src="assets/foto-perfil.jpg" alt="" width="38" height="38" /><div><b>Adrian Copa</b><small>Gerente de Operaciones</small></div></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#servicios">Qué hago</a>
+      <a href="#casos">Casos</a>
+      <a href="#trabajemos">Trabajemos</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#libros">Libros</a>
+      <a href="#blog">Blog</a>
+      <a href="#videos">Videos</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary" style="padding:11px 18px">Hablemos</a>
+  </div>
+  <nav class="chips" aria-label="Secciones">
+    <a href="#servicios">Qué hago</a>
+    <a href="#casos">Casos de éxito</a>
+    <a href="#metodo">Método</a>
+    <a href="#trabajemos">Trabajemos</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#libros">Libros</a>
+    <a href="#blog">Blog</a>
+    <a href="#videos">Videos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO: promesa + prueba + acción -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hello reveal"><img src="assets/foto-perfil.jpg" alt="Adrian Copa" width="52" height="52" /><span><span class="hi">Hola, soy</span> Adrian Copa</span></p>
+          <span class="role-pill reveal"><span class="live"></span>Gerente de Operaciones · Consumo masivo (Home &amp; Personal Care)</span>
+          <h1 class="reveal">Transformo procesos ineficientes en <span class="hl">resultados medibles.</span></h1>
+          <p class="lead reveal">Más de 10 años en <b>Unilever, Astrix y Novaquimica</b> haciendo que las fábricas <b>vendan más, gasten menos</b> y no dependan de una sola persona.</p>
+          <div class="cta reveal">
+            <a class="btn btn-primary btn-lg btn-pulse" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20conversar%20sobre%20mi%20operaci%C3%B3n." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+              Conversemos 15 min <span class="arr">→</span>
+            </a>
+            <a class="btn btn-li btn-lg" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              Mi LinkedIn
+            </a>
+          </div>
+          <div class="kpis reveal" id="kpis">
+            <div class="kpi">
+              <div class="face on"><b>3,5<em>x</em></b><span>facturación en menos de 2 años</span><i>Novaquimica</i></div>
+              <div class="face"><b>+157<em>%</em></b><span>ventas mensuales en una pyme</span><i>kocha Group</i></div>
+              <div class="face"><b>-20<em>%</em></b><span>tiempos de entrega al cliente</span><i>kocha Group</i></div>
+              <div class="tick"></div>
+            </div>
+            <div class="kpi">
+              <div class="face on"><b><em>Bs</em> 190K</b><span>de caja liberada del inventario</span><i>Novaquimica</i></div>
+              <div class="face"><b><em>USD</em> 35K</b><span>de ahorro anual por mejora continua</span><i>Astrix</i></div>
+              <div class="face"><b>4h<em>→</em>1h</b><span>tiempo de carga de camiones</span><i>Novaquimica</i></div>
+              <div class="tick"></div>
+            </div>
+            <div class="kpi">
+              <div class="face on"><b>-90<em>%</em></b><span>fallas de calidad a nivel nacional</span><i>Unilever</i></div>
+              <div class="face"><b>100<em>%</em></b><span>de auditorías internas y externas</span><i>Unilever</i></div>
+              <div class="face"><b>99<em>%</em></b><span>exactitud de inventarios con SAP</span><i>Astrix</i></div>
+              <div class="tick"></div>
+            </div>
+          </div>
+          <a class="more-proof reveal" href="#numeros">Ver los +15 logros medibles <span>→</span></a>
+        </div>
+
+        <div class="visual reveal" id="visual">
+          <div class="photo-card" id="photo">
+            <img src="assets/foto-perfil.jpg" alt="Adrian Copa, Gerente de Operaciones" width="640" height="640" />
+            <div class="photo-cap">
+              <div><b>Adrian Copa</b><small>Gerente de Operaciones</small></div>
+              <div class="status"><span class="live"></span>Disponible</div>
+            </div>
+          </div>
+          <div class="badge b1" data-slot="0"></div>
+          <div class="badge b2" data-slot="1"></div>
+          <div class="badge b3" data-slot="2"></div>
+        </div>
+      </div>
+
+      <!-- explore: makes every section visible from the first screen -->
+      <div class="explore">
+        <a class="tile reveal" href="#servicios"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l5 3V10l5 3V6l4 2v13"/></svg></span><div><b>Qué hago por tu empresa</b><small>6 áreas con resultados</small></div><span class="go">→</span></a>
+        <a class="tile reveal" href="#casos"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><div><b>Casos de éxito</b><small>Antes, qué hice y después</small></div><span class="go">→</span></a>
+        <a class="tile reveal" href="#libros"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2zM20 19v3H6"/></svg></span><div><b>Mis 4 libros</b><small>Liderazgo y producción</small></div><span class="go">→</span></a>
+        <a class="tile reveal" href="#videos"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><div><b>Videos Modo Fábrica</b><small>Consejos en 1 minuto</small></div><span class="go">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST -->
+  <div class="trust">
+    <div class="wrap trust-in">
+      <p>Experiencia en</p>
+      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span><span>kocha Group</span></div>
+    </div>
+  </div>
+
+  <!-- 3. SERVICIOS: qué puedo hacer por otras empresas -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Qué hago por tu empresa</span><h2>Resuelvo los problemas que <span class="hl">frenan el crecimiento</span> de una fábrica.</h2></div>
+        <p>Cada solución viene con un resultado que ya logré. No teoría: operaciones reales, medidas en bolivianos.</p>
+      </div>
+      <div class="services">
+        <!-- 1. Crecer -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#fff1e8;--b:#ffd9c2">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Fábrica con ventas en crecimiento">
+              <circle cx="262" cy="42" r="46" fill="#fff" opacity=".45"/>
+              <path d="M0 150h320v20H0z" fill="#f4c3a6"/>
+              <circle cx="122" cy="36" r="7" fill="#fff" opacity=".9"/><circle cx="134" cy="24" r="9" fill="#fff" opacity=".8"/><circle cx="150" cy="14" r="11" fill="#fff" opacity=".7"/>
+              <rect x="114" y="42" width="15" height="46" rx="2" fill="#26344a"/>
+              <path d="M28 150V86l26-20v20l26-20v20l26-20v20h36v64z" fill="#0f1b2d"/>
+              <g fill="#ffc53d"><rect x="40" y="100" width="13" height="13" rx="2"/><rect x="61" y="100" width="13" height="13" rx="2"/><rect x="82" y="100" width="13" height="13" rx="2"/><rect x="103" y="100" width="13" height="13" rx="2"/></g>
+              <rect x="66" y="124" width="20" height="26" rx="2" fill="#e0622f"/>
+              <g><rect x="178" y="118" width="20" height="32" rx="4" fill="#f6a27a"/><rect x="204" y="100" width="20" height="50" rx="4" fill="#f08a5d"/><rect x="230" y="78" width="20" height="72" rx="4" fill="#e0622f"/><rect x="256" y="52" width="20" height="98" rx="4" fill="#c7511f"/></g>
+              <path d="M172 108l30-18 26 8 44-44" fill="none" stroke="#0f1b2d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M262 46l18-8-6 19z" fill="#0f1b2d"/>
+              <g><ellipse cx="296" cy="146" rx="13" ry="5" fill="#d99a00"/><rect x="283" y="136" width="26" height="10" fill="#ffc53d"/><ellipse cx="296" cy="136" rx="13" ry="5" fill="#ffd66b"/></g>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“Vendemos más, pero todo es un caos”</p>
+            <h3>Crecer en ventas sin perder el control</h3>
+            <p>Reestructuro planta, planificación y compras para que la operación acompañe al crecimiento.</p>
+            <ul class="proofs">
+              <li><b>3,5x</b><span>facturación: de Bs 200K a Bs 700K/mes</span><i>Novaquimica</i></li>
+              <li><b>+157%</b><span>ventas mensuales en una pyme</span><i>kocha Group</i></li>
+              <li><b>B2B</b><span>ventas mayoristas y cuentas clave</span><i>Fabrione</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Crecer%20en%20ventas%20sin%20perder%20el%20control." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+        <!-- 2. Caja -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#e6f7f3;--b:#c8ece3">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Almacén que libera dinero">
+              <path d="M0 150h320v20H0z" fill="#a9dccf"/>
+              <g fill="#26344a"><rect x="26" y="34" width="7" height="116" rx="2"/><rect x="149" y="34" width="7" height="116" rx="2"/><rect x="26" y="74" width="130" height="6" rx="2"/><rect x="26" y="112" width="130" height="6" rx="2"/><rect x="26" y="146" width="130" height="6" rx="2"/></g>
+              <g><rect x="38" y="48" width="30" height="26" rx="2" fill="#d9a066"/><rect x="50" y="48" width="6" height="26" fill="#b8844f"/><rect x="74" y="54" width="26" height="20" rx="2" fill="#e8b67c"/><rect x="84" y="54" width="6" height="20" fill="#c79457"/><rect x="40" y="88" width="34" height="24" rx="2" fill="#e8b67c"/><rect x="54" y="88" width="6" height="24" fill="#c79457"/><rect x="80" y="92" width="24" height="20" rx="2" fill="#d9a066"/><rect x="110" y="84" width="32" height="28" rx="2" fill="#d9a066"/><rect x="123" y="84" width="6" height="28" fill="#b8844f"/><rect x="44" y="124" width="28" height="22" rx="2" fill="#d9a066"/></g>
+              <path d="M112 60c40-34 86-30 104 8" fill="none" stroke="#e0622f" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 10"/>
+              <path d="M206 58l14 16 6-20z" fill="#e0622f"/>
+              <rect x="200" y="84" width="96" height="62" rx="12" fill="#0f1b2d"/>
+              <rect x="200" y="84" width="96" height="20" rx="10" fill="#26344a"/>
+              <rect x="258" y="104" width="38" height="24" rx="8" fill="#2bb3a3"/><circle cx="272" cy="116" r="5" fill="#fff"/>
+              <g font-family="Manrope, sans-serif" font-weight="800" font-size="11" text-anchor="middle"><circle cx="236" cy="54" r="15" fill="#ffc53d"/><text x="236" y="58" fill="#8a5a00">Bs</text><circle cx="270" cy="36" r="12" fill="#ffd66b"/><text x="270" y="40" fill="#8a5a00" font-size="9">Bs</text><circle cx="296" cy="62" r="10" fill="#ffc53d"/></g>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“La plata se nos queda en la bodega”</p>
+            <h3>Liberar el capital atrapado en inventario</h3>
+            <p>Inventarios cíclicos, almacén autónomo y despachos estandarizados: la caja vuelve a la operación.</p>
+            <ul class="proofs">
+              <li><b>Bs 190K</b><span>de caja liberada (de Bs 250K a Bs 60K)</span><i>Novaquimica</i></li>
+              <li><b>4h → 1h</b><span>carga de camiones</span><i>Novaquimica</i></li>
+              <li><b>99%</b><span>exactitud de inventarios con SAP One</span><i>Astrix</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Liberar%20el%20capital%20atrapado%20en%20inventario." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+        <!-- 3. Mermas -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#eaf1ff;--b:#d3e2ff">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Línea de producción eficiente">
+              <path d="M0 150h320v20H0z" fill="#b9cdf5"/>
+              <g><rect x="34" y="72" width="24" height="46" rx="7" fill="#3b82f6"/><rect x="40" y="62" width="12" height="12" rx="2" fill="#1e3a8a"/><rect x="38" y="88" width="16" height="14" rx="2" fill="#fff" opacity=".85"/></g>
+              <g><rect x="80" y="72" width="24" height="46" rx="7" fill="#22c55e"/><rect x="86" y="62" width="12" height="12" rx="2" fill="#14532d"/><rect x="84" y="88" width="16" height="14" rx="2" fill="#fff" opacity=".85"/></g>
+              <g><rect x="126" y="72" width="24" height="46" rx="7" fill="#ffc53d"/><rect x="132" y="62" width="12" height="12" rx="2" fill="#8a5a00"/><rect x="130" y="88" width="16" height="14" rx="2" fill="#fff" opacity=".85"/></g>
+              <g><rect x="172" y="72" width="24" height="46" rx="7" fill="#e0622f"/><rect x="178" y="62" width="12" height="12" rx="2" fill="#7c2d12"/><rect x="176" y="88" width="16" height="14" rx="2" fill="#fff" opacity=".85"/></g>
+              <rect x="20" y="118" width="192" height="12" rx="6" fill="#26344a"/>
+              <g fill="#64748b" stroke="#26344a" stroke-width="3"><circle cx="34" cy="138" r="8"/><circle cx="76" cy="138" r="8"/><circle cx="118" cy="138" r="8"/><circle cx="160" cy="138" r="8"/><circle cx="200" cy="138" r="8"/></g>
+              <path d="M226 112a38 38 0 0 1 76 0" fill="none" stroke="#e2e8f0" stroke-width="12"/>
+              <path d="M226 112a38 38 0 0 1 20-33" fill="none" stroke="#22c55e" stroke-width="12"/>
+              <path d="M250 76a38 38 0 0 1 28 0" fill="none" stroke="#ffc53d" stroke-width="12"/>
+              <path d="M282 79a38 38 0 0 1 20 33" fill="none" stroke="#ef4444" stroke-width="12"/>
+              <path d="M264 112l-20-24" stroke="#0f1b2d" stroke-width="5" stroke-linecap="round"/><circle cx="264" cy="112" r="7" fill="#0f1b2d"/>
+              <text x="264" y="148" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="22" fill="#e0622f">-30%</text>
+              <path d="M300 20v28M290 38l10 12 10-12" fill="none" stroke="#e0622f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“Producimos, pero se pierde mucho”</p>
+            <h3>Reducir mermas y costos de producción</h3>
+            <p>Rediseño procesos y controlo rendimiento para producir más con los mismos recursos.</p>
+            <ul class="proofs">
+              <li><b>-30%</b><span>mermas y +20% de rendimiento, sin maquinaria nueva</span><i>Novaquimica</i></li>
+              <li><b>USD 35K</b><span>de ahorro al año en desperdicios, aguas y reproceso</span><i>Astrix</i></li>
+              <li><b>-10%</b><span>costo de materiales y envasado +15%</span><i>Astrix</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Reducir%20mermas%20y%20costos%20de%20producci%C3%B3n." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+        <!-- 4. Calidad -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#e8f8ee;--b:#c9eed6">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Control de calidad aprobado">
+              <path d="M0 150h320v20H0z" fill="#a5dcb9"/>
+              <rect x="40" y="26" width="112" height="132" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect x="74" y="16" width="44" height="18" rx="5" fill="#0f1b2d"/>
+              <g><circle cx="64" cy="60" r="10" fill="#22c55e"/><path d="M59 60l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="82" y="56" width="56" height="7" rx="3.5" fill="#cbd5e1"/></g>
+              <g><circle cx="64" cy="92" r="10" fill="#22c55e"/><path d="M59 92l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="82" y="88" width="44" height="7" rx="3.5" fill="#cbd5e1"/></g>
+              <g><circle cx="64" cy="124" r="10" fill="#22c55e"/><path d="M59 124l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="82" y="120" width="50" height="7" rx="3.5" fill="#cbd5e1"/></g>
+              <circle cx="148" cy="118" r="22" fill="#fff" fill-opacity=".5" stroke="#e0622f" stroke-width="7"/>
+              <path d="M164 134l18 18" stroke="#e0622f" stroke-width="9" stroke-linecap="round"/>
+              <path d="M240 24l44 16v34c0 30-20 48-44 56-24-8-44-26-44-56V40z" fill="#0f1b2d"/>
+              <path d="M222 76l13 13 25-27" fill="none" stroke="#ffc53d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <g font-family="Manrope, sans-serif" font-weight="800" text-anchor="middle"><circle cx="292" cy="130" r="20" fill="#e0622f"/><text x="292" y="128" font-size="10" fill="#fff">ISO</text><text x="292" y="140" font-size="9" fill="#fff">9001</text></g>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“Los clientes nos rechazan producto”</p>
+            <h3>Calidad que pasa cualquier auditoría</h3>
+            <p>Paso la calidad de correctiva a preventiva, con sistemas documentados y análisis de causa raíz.</p>
+            <ul class="proofs">
+              <li><b>-90%</b><span>no conformidades: de 250/año a 1–2/mes</span><i>Unilever</i></li>
+              <li><b>100%</b><span>de auditorías internas y externas aprobadas</span><i>Unilever</i></li>
+              <li><b>-15%</b><span>defectos y +20% eficiencia de procesos</span><i>Astrix</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Calidad%20que%20pasa%20cualquier%20auditor%C3%ADa." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+        <!-- 5. Datos + IA -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#f3edff;--b:#e0d3ff">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Panel de datos con inteligencia artificial">
+              <path d="M0 150h320v20H0z" fill="#cdbcf5"/>
+              <rect x="34" y="22" width="176" height="112" rx="10" fill="#0f1b2d"/>
+              <rect x="44" y="32" width="156" height="90" rx="5" fill="#1e2b44"/>
+              <polyline points="52,104 74,90 94,96 116,72 138,78 158,52" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <g fill="#e0622f"><rect x="54" y="112" width="8" height="6" rx="1"/><rect x="66" y="108" width="8" height="10" rx="1"/><rect x="78" y="104" width="8" height="14" rx="1"/></g>
+              <circle cx="182" cy="56" r="13" fill="none" stroke="#334155" stroke-width="7"/>
+              <path d="M182 43a13 13 0 0 1 12 17" fill="none" stroke="#ffc53d" stroke-width="7"/>
+              <rect x="166" y="82" width="28" height="5" rx="2.5" fill="#475569"/><rect x="166" y="92" width="20" height="5" rx="2.5" fill="#475569"/>
+              <rect x="110" y="134" width="24" height="12" fill="#26344a"/><rect x="92" y="145" width="60" height="7" rx="3.5" fill="#26344a"/>
+              <rect x="226" y="58" width="72" height="74" rx="9" fill="#fff"/>
+              <rect x="226" y="58" width="72" height="20" rx="9" fill="#e0622f"/><rect x="226" y="68" width="72" height="10" fill="#e0622f"/>
+              <g fill="#cbd5e1"><circle cx="241" cy="92" r="4"/><circle cx="256" cy="92" r="4"/><circle cx="271" cy="92" r="4"/><circle cx="286" cy="92" r="4"/><circle cx="241" cy="106" r="4"/><circle cx="271" cy="106" r="4"/><circle cx="286" cy="106" r="4"/><circle cx="241" cy="120" r="4"/><circle cx="256" cy="120" r="4"/></g>
+              <circle cx="256" cy="106" r="7" fill="#7a3fc9"/>
+              <path d="M262 8l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#ffc53d"/>
+              <path d="M298 30l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7a3fc9"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“Decidimos a ciegas”</p>
+            <h3>Planificación con datos e IA</h3>
+            <p>S&amp;OP, MRP, plan de compras y reportes automatizados que comparan costo ideal vs. real.</p>
+            <ul class="proofs">
+              <li><b>Desde 0</b><span>área de planificación y compras (S&amp;OP y MRP)</span><i>Novaquimica</i></li>
+              <li><b>1 hora</b><span>actualización del dashboard gerencial desde el ERP</span><i>Novaquimica</i></li>
+              <li><b>-15%</b><span>tiempo de lanzamiento de productos</span><i>Unilever</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Planificaci%C3%B3n%20con%20datos%20e%20IA." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+        <!-- 6. Equipos -->
+        <article class="svc reveal">
+          <div class="art" style="--a:#fff6df;--b:#ffe7a8">
+            <svg viewBox="0 0 320 170" role="img" aria-label="Equipo autónomo alcanzando la meta">
+              <path d="M0 150h320v20H0z" fill="#f5d27a"/>
+              <circle cx="160" cy="78" r="62" fill="#fff" opacity=".55"/><circle cx="160" cy="78" r="44" fill="#fff" opacity=".6"/>
+              <path d="M160 4v36" stroke="#26344a" stroke-width="4" stroke-linecap="round"/><path d="M162 6h30l-8 9 8 9h-30z" fill="#e0622f"/>
+              <g><circle cx="92" cy="80" r="15" fill="#e8b48a"/><path d="M77 76a15 15 0 0 1 30 0c-6-6-24-6-30 0z" fill="#2d2d2d"/><path d="M66 150v-28a26 26 0 0 1 52 0v28z" fill="#0f1b2d"/></g>
+              <g><circle cx="228" cy="80" r="15" fill="#d9a07a"/><path d="M213 78a15 15 0 0 1 30-2c-4-9-24-10-30 2z" fill="#4a2c1a"/><path d="M202 150v-28a26 26 0 0 1 52 0v28z" fill="#2bb3a3"/></g>
+              <g><circle cx="160" cy="64" r="17" fill="#f2c9a0"/><path d="M143 60a17 17 0 0 1 34 0c-7-7-27-7-34 0z" fill="#1f1f1f"/><path d="M130 150v-34a30 30 0 0 1 60 0v34z" fill="#e0622f"/></g>
+              <g><rect x="24" y="42" width="40" height="26" rx="8" fill="#fff"/><path d="M40 68l-4 9 12-9z" fill="#fff"/><path d="M36 55l5 5 9-9" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <g><rect x="256" y="42" width="40" height="26" rx="8" fill="#fff"/><path d="M272 68l4 9-12-9z" fill="#fff"/><path d="M266 55l5 5 9-9" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <p class="pain">“Si el dueño no está, nada avanza”</p>
+            <h3>Equipos que funcionan sin supervisión</h3>
+            <p>Formo mandos medios y rutinas semanales con planes de acción. El resultado se sostiene solo.</p>
+            <ul class="proofs">
+              <li><b>1.º</b><span>equipo de mejora continua de la empresa</span><i>Novaquimica</i></li>
+              <li><b>Nacional</b><span>equipo de calidad de correctivo a preventivo</span><i>Unilever</i></li>
+              <li><b>15%</b><span>de ahorro operativo con gestión integral</span><i>kocha Group</i></li>
+            </ul>
+            <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Equipos%20que%20funcionan%20sin%20supervisi%C3%B3n." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="sec-cta reveal">
+        <p>¿Reconoces alguno de estos problemas en tu empresa?<span>Cuéntamelo y te digo por dónde empezaría, sin compromiso.</span></p>
+        <a class="btn btn-primary btn-lg btn-pulse" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20en%20mi%20empresa%20tenemos%20este%20problema%3A%20" target="_blank" rel="noopener">Contarte mi caso →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. NÚMEROS -->
+  <div class="band" id="numeros">
+    <div class="wrap">
+      <span class="eyebrow">En números</span>
+      <h2 class="reveal">+15 resultados medibles en 5 empresas.</h2>
+      <div class="filter reveal" id="numFilter">
+        <button class="on" data-f="all">Todas</button><button data-f="nova">Novaquimica</button><button data-f="uni">Unilever</button><button data-f="astrix">Astrix</button><button data-f="kocha">kocha Group</button>
+      </div>
+      <div class="nums reveal" id="nums">
+        <div class="n" data-c="nova"><b>+<span data-count="250">250</span><em>%</em></b><p><strong>Facturación mensual</strong>: de Bs 200K a Bs 700K.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>Bs <span data-count="190">190</span><em>K</em></b><p><strong>Capital liberado</strong> del inventario (de Bs 250K a Bs 60K).</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>-<span data-count="30">30</span><em>%</em></b><p><strong>Mermas de planta</strong>, sin invertir en maquinaria.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>+<span data-count="20">20</span><em>%</em></b><p><strong>Rendimiento de línea</strong> con procesos rediseñados.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>4h<em>→</em>1h</b><p><strong>Carga de camiones</strong> con un almacén autónomo.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>Tier 3<em>→</em>2</b><p><strong>Posicionamiento de marca</strong> y márgenes actualizados.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="uni"><b>-<span data-count="90">90</span><em>%</em></b><p><strong>No conformidades</strong>: de 250 al año a 1–2 al mes.</p><i>Unilever</i></div>
+        <div class="n" data-c="uni"><b><span data-count="100">100</span><em>%</em></b><p><strong>Auditorías aprobadas</strong>, internas y externas.</p><i>Unilever</i></div>
+        <div class="n" data-c="uni"><b>-<span data-count="15">15</span><em>%</em></b><p><strong>Tiempo de lanzamiento</strong> de nuevos productos.</p><i>Unilever</i></div>
+        <div class="n" data-c="kocha"><b>+<span data-count="157">157</span><em>%</em></b><p><strong>Ventas mensuales</strong>: de Bs 70K a Bs 180K.</p><i>kocha Group</i></div>
+        <div class="n" data-c="kocha"><b>-<span data-count="20">20</span><em>%</em></b><p><strong>Tiempos de entrega</strong> y 15% de ahorro operativo.</p><i>kocha Group</i></div>
+        <div class="n" data-c="astrix"><b>USD <span data-count="35">35</span><em>K</em></b><p><strong>Ahorro anual</strong> en desperdicios, aguas, reproceso y envasado.</p><i>Astrix</i></div>
+        <div class="n" data-c="astrix"><b><span data-count="99">99</span><em>%</em></b><p><strong>Exactitud de inventarios</strong> con SAP One.</p><i>Astrix</i></div>
+        <div class="n" data-c="astrix"><b>+<span data-count="20">20</span><em>%</em></b><p><strong>Eficiencia de procesos</strong>, con defectos -15%.</p><i>Astrix</i></div>
+        <div class="n" data-c="astrix"><b>-<span data-count="10">10</span><em>%</em></b><p><strong>Costo de materiales</strong> y envasado PET-PEAD +15%.</p><i>Astrix</i></div>
+        <div class="n n-cta"><b>¿El próximo?</b><p>Tu empresa puede ser el siguiente caso de éxito.</p><a class="btn btn-primary" href="#contacto">Hablemos <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. CASOS -->
+  <section id="casos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Casos de éxito</span><h2>Antes, qué hice y <span class="hl">después.</span></h2></div>
+        <p>Cuatro transformaciones reales. El mismo método puede aplicarse a tu operación.</p>
+      </div>
+      <div class="cases">
+        <article class="case reveal">
+          <div class="case-fig"><small>Novaquimica</small><b>3,5x</b><span>facturación mensual</span></div>
+          <div class="case-body"><h3>De empresa estancada a crecimiento sostenido</h3>
+            <div class="steps3"><div><h4>Antes</h4><p>Facturación de Bs 200K al mes, sin área de planificación ni compras.</p></div><div><h4>Qué hice</h4><p>Reestructuré planta, creé S&amp;OP y MRP, consolidé el ERP y reuniones semanales con planes de acción.</p></div><div><h4>Después</h4><p><b>Bs 700K al mes</b> en menos de dos años, y la marca pasó de tier 3 a tier 2.</p></div></div>
+          </div>
+        </article>
+        <article class="case reveal">
+          <div class="case-fig"><small>Novaquimica</small><b>Bs 190K</b><span>de caja liberada</span></div>
+          <div class="case-body"><h3>La caja salió de la bodega</h3>
+            <div class="steps3"><div><h4>Antes</h4><p>Bs 250K inmovilizados en inventario y 4 horas para cargar un camión.</p></div><div><h4>Qué hice</h4><p>Inventarios cíclicos, almacén autónomo y despachos estandarizados.</p></div><div><h4>Después</h4><p><b>Bs 60K</b> en inventario y carga de camiones en <b>1 hora</b>.</p></div></div>
+          </div>
+        </article>
+        <article class="case reveal">
+          <div class="case-fig"><small>Unilever Bolivia</small><b>-90%</b><span>fallas de calidad</span></div>
+          <div class="case-body"><h3>Calidad preventiva a nivel nacional</h3>
+            <div class="steps3"><div><h4>Antes</h4><p>250 no conformidades al año, con un enfoque de calidad correctivo.</p></div><div><h4>Qué hice</h4><p>Cambié el enfoque a preventivo en 2 años y cerré casos con proveedores por causa raíz.</p></div><div><h4>Después</h4><p><b>1–2 casos al mes</b>, 100% de auditorías aprobadas y lanzamientos 15% más rápidos.</p></div></div>
+          </div>
+        </article>
+        <article class="case reveal">
+          <div class="case-fig"><small>kocha Group</small><b>+157%</b><span>ventas mensuales</span></div>
+          <div class="case-body"><h3>Gestión integral de una pyme</h3>
+            <div class="steps3"><div><h4>Antes</h4><p>Ventas de Bs 70K al mes y entregas lentas.</p></div><div><h4>Qué hice</h4><p>Ordené ventas, producción y finanzas bajo una sola gestión.</p></div><div><h4>Después</h4><p><b>Bs 180K al mes</b>, entregas 20% más rápidas y 15% de ahorro operativo.</p></div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MÉTODO -->
+  <section id="metodo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Cómo trabajo</span><h2>Un método simple, <span class="hl">probado en planta.</span></h2></div>
+        <p>No me quedo en el diagnóstico: implemento junto a tu equipo y dejo el sistema funcionando.</p>
+      </div>
+      <div class="method">
+        <div class="step reveal"><div class="num">01</div><h3>Diagnóstico con datos</h3><p>Encuentro dónde se va el dinero: mermas, costos reales vs. ideales, inventario inmovilizado.</p></div>
+        <div class="step reveal"><div class="num">02</div><h3>Plan priorizado</h3><p>Primero lo que libera caja rápido; después la estructura: S&amp;OP, MRP, calidad y compras.</p></div>
+        <div class="step reveal"><div class="num">03</div><h3>Implementación en planta</h3><p>Trabajo con el equipo, con reuniones semanales y planes de acción medibles.</p></div>
+        <div class="step reveal"><div class="num">04</div><h3>Sistema autónomo</h3><p>Formo mandos medios y dejo dashboards: el resultado se sostiene sin mí.</p></div>
+      </div>
+      <div class="quote reveal">
+        <img src="assets/foto-perfil.jpg" alt="" width="84" height="84" />
+        <div><blockquote>“Cuando me voy de un puesto, el equipo que formé sigue sosteniendo el resultado. Esa es la mejor medida de mi trabajo.”</blockquote><cite>Adrian Copa · Gerente de Operaciones</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FORMAS DE TRABAJAR JUNTOS -->
+  <section id="trabajemos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Trabajemos juntos</span><h2>Tres formas de <span class="hl">sumar resultados</span> a tu empresa.</h2></div>
+        <p>Elige la que se adapta a tu momento. Si no sabes cuál, conversemos 15 minutos.</p>
+      </div>
+      <div class="offers">
+        <article class="offer reveal">
+          <span class="for">Para pymes e industrias</span>
+          <h3>Consultoría operativa</h3>
+          <p>Diagnóstico e implementación para ordenar tu operación y bajar costos.</p>
+          <ul><li>Diagnóstico de mermas, costos e inventario</li><li>Plan de acción priorizado</li><li>Acompañamiento en la implementación</li></ul>
+          <a class="btn btn-ghost" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20la%20consultor%C3%ADa%20operativa." target="_blank" rel="noopener">Quiero un diagnóstico</a>
+        </article>
+        <article class="offer featured reveal">
+          <span class="tag-pop">Disponible</span>
+          <span class="for">Para directorios y headhunters</span>
+          <h3>Gerencia de Operaciones</h3>
+          <p>Liderazgo de la operación completa: producción, planificación, compras, calidad e inventarios.</p>
+          <ul><li>Reestructuración con resultados en bolivianos</li><li>Áreas creadas desde cero</li><li>Equipos autónomos y medibles</li></ul>
+          <a class="btn btn-primary" href="assets/CV_Adrian_Copa_2026.pdf" download>Descargar mi CV</a>
+        </article>
+        <article class="offer reveal">
+          <span class="for">Para equipos</span>
+          <h3>Formación de líderes</h3>
+          <p>Talleres para supervisores y mandos medios, basados en mis libros y en mi experiencia de planta.</p>
+          <ul><li>Supervisión proactiva</li><li>Del puesto operativo a jefe</li><li>Mejora continua aplicada</li></ul>
+          <a class="btn btn-ghost" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20una%20formaci%C3%B3n%20para%20mi%20equipo." target="_blank" rel="noopener">Consultar un taller</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TRAYECTORIA -->
+  <section id="trayectoria" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Trayectoria</span><h2>+10 años en <span class="hl">consumo masivo.</span></h2></div>
+        <p>Home Care y Personal Care: de procesos y calidad a la gerencia de la operación completa. Toca cada puesto para ver el detalle.</p>
+      </div>
+      <div class="timeline reveal">
+        <article class="job open">
+          <div class="when">Ene 2024 — Hoy</div>
+          <div><h3>Gerente de Operaciones</h3><p class="org"><b>Novaquimica SRL</b> · Santa Cruz, Bolivia</p><span class="hit">3,5x facturación</span></div>
+          <div class="plus">+</div>
+          <div class="detail"><div><ul>
+            <li>Reestructuración integral: facturación mensual de <b>Bs 200.000 a Bs 700.000</b> (+250%).</li>
+            <li>Mermas <b>-30%</b> y rendimiento de línea <b>+20%</b> sin invertir en maquinaria nueva.</li>
+            <li><b>Bs 190.000 liberados</b> de inventario; carga de camiones de 4 h a 1 h con almacén autónomo.</li>
+            <li>Planificación y compras creadas desde cero: proyección de ventas, S&amp;OP, MRP y reportes con IA.</li>
+            <li>Marca de tier 3 a tier 2; costos y márgenes actualizados en todo el portafolio.</li>
+            <li>Dashboard gerencial que se actualiza cada hora desde el ERP e indicador de costo ideal vs. real.</li>
+          </ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">2024 — Hoy</div>
+          <div><h3>Consultor Independiente</h3><p class="org"><b>Pymes</b> · Operaciones, calidad y mejora continua</p></div>
+          <div class="plus">+</div>
+          <div class="detail"><div><ul><li>Asesoro a pequeñas y medianas empresas que buscan ordenar su operación y reducir costos.</li></ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">Jun 2023 — Ene 2024</div>
+          <div><h3>Gerente Comercial</h3><p class="org"><b>Fabrione</b></p></div>
+          <div class="plus">+</div>
+          <div class="detail"><div><ul><li>Planes comerciales y campañas de marketing; ventas mayoristas B2B y gestión de cuentas clave.</li></ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">Feb 2023 — Jun 2023</div>
+          <div><h3>Gerente Regional</h3><p class="org"><b>kocha Group</b> · Cochabamba</p><span class="hit">+157% ventas</span></div>
+          <div class="plus">+</div>
+          <div class="detail"><div><ul><li>Gestión integral de una pyme: ventas de <b>Bs 70.000 a Bs 180.000</b> al mes, entregas -20% y 15% de ahorro operativo.</li></ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">Ene 2020 — Sept 2021</div>
+          <div><h3>Jefe de Aseguramiento de la Calidad</h3><p class="org"><b>Unilever</b> · Bolivia</p><span class="hit">-90% no conformidades</span></div>
+          <div class="plus">+</div>
+          <div class="detail"><div><ul>
+            <li>Calidad de correctiva a preventiva a nivel nacional: de <b>250 casos/año a 1–2 por mes</b>.</li>
+            <li>100% de cumplimiento en auditorías internas y externas; lanzamientos 15% más rápidos.</li>
+          </ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">Ene 2015 — Dic 2019</div>
+          <div><h3>Calidad, Elaboración y Procesos</h3><p class="org"><b>Astrix S.A.</b> · Home Care y Personal Care</p><span class="hit">USD 35K/año de ahorro</span></div>
+          <div class="plus">+</div>
+          <div class="detail"><div>
+            <p class="job-sub">Jefe de Aseguramiento de la Calidad · Supervisor de Elaboración · Asistente de Procesos</p>
+            <ul>
+              <li>Eficiencia de procesos +20%, defectos -15% y costos de materiales -10%.</li>
+              <li>Ahorros de ~<b>USD 20.000/año</b> y 99% de exactitud de inventarios con SAP One.</li>
+              <li>Envasado y soplado PET-PEAD +15%; ~USD 15.000/año de ahorro; arranque de planta de tratamiento de aguas con tecnología DAF.</li>
+            </ul>
+          </div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LIBROS -->
+  <section id="libros">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Autor</span><h2>4 libros para quienes <span class="hl">lideran y producen.</span></h2></div>
+        <p>Lo que aprendí en planta, convertido en guías prácticas. Pasa el cursor o toca un libro.</p>
+      </div>
+      <div class="shelf">
+        <div class="book-wrap reveal">
+          <div class="book" tabindex="0" style="--spine:#20124d"><img class="cover" src="assets/libro-12-pasos.jpg" alt="Portada: 12 pasos para tener éxito en tu 1er trabajo" width="266" height="425" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
+          <div class="book-shadow"></div>
+          <div class="book-info"><span class="plat">Amazon</span><h3>12 pasos para tener éxito en tu 1er trabajo</h3><p>Prólogo de Sergio Roberto Paz, Head of Quality LatAm en Unilever.</p><a href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20tu%20libro%20%2212%20pasos%20para%20tener%20%C3%A9xito%20en%20tu%201er%20trabajo%22" target="_blank" rel="noopener">Lo quiero →</a></div>
+        </div>
+        <div class="book-wrap reveal">
+          <div class="book" tabindex="0" style="--spine:#170c4a"><img class="cover" src="assets/libro-7-pasos.jpg" alt="Portada: 7 pasos para llegar a ser jefe" width="700" height="990" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
+          <div class="book-shadow"></div>
+          <div class="book-info"><span class="plat">Hotmart</span><h3>7 pasos para llegar a ser jefe</h3><p>Para asistentes y supervisores que quieren dar el salto.</p><a href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20tu%20libro%20%227%20pasos%20para%20llegar%20a%20ser%20jefe%22" target="_blank" rel="noopener">Lo quiero →</a></div>
+        </div>
+        <div class="book-wrap reveal">
+          <div class="book" tabindex="0" style="--spine:#0d1b2a"><img class="cover" src="assets/libro-supervision.jpg" alt="Portada: Supervisión proactiva" width="700" height="990" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
+          <div class="book-shadow"></div>
+          <div class="book-info"><span class="plat">Liderazgo</span><h3>Supervisión proactiva</h3><p>Estrategias para anticipar problemas y afrontar desafíos.</p><a href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20tu%20libro%20%22Supervisi%C3%B3n%20proactiva%22" target="_blank" rel="noopener">Lo quiero →</a></div>
+        </div>
+        <div class="book-wrap reveal">
+          <div class="book" tabindex="0" style="--spine:#067a1a"><img class="cover" src="assets/libro-lavavajillas.jpg" alt="Portada: Guía definitiva Lavavajillas" width="700" height="1117" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
+          <div class="book-shadow"></div>
+          <div class="book-info"><span class="plat">Hotmart</span><h3>Guía definitiva: Lavavajillas</h3><p>Formulación, elaboración y costos, paso a paso.</p><a href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20tu%20%22Gu%C3%ADa%20definitiva%20Lavavajillas%22" target="_blank" rel="noopener">Lo quiero →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Blog y LinkedIn</span><h2>Ideas que comparto <span class="hl">cada semana.</span></h2></div>
+        <p>Lo que publico en LinkedIn y TikTok, reunido aquí: operaciones, costos, calidad y liderazgo para pymes.</p>
+      </div>
+      <div class="topics reveal" id="topics"></div>
+      <div class="posts" id="posts"></div>
+      <div class="li-cta reveal">
+        <div class="li-who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Gerente de Operaciones · Consumo masivo</span></div></div>
+        <p>Sígueme en LinkedIn para recibir cada publicación primero.</p>
+        <div class="li-actions">
+          <a class="btn btn-li btn-lg" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Seguir en LinkedIn</a>
+          <a class="btn btn-ghost btn-lg" href="blog.html">Ver todo el blog <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. VIDEOS -->
+  <section id="videos">
+    <div class="wrap">
+      <div class="tt-head reveal">
+        <div><span class="eyebrow">Modo Fábrica en TikTok</span><h2>Consejos para pymes <span class="hl">en 1 minuto.</span></h2><p>Errores que frenan a las fábricas, calidad, inventarios y liderazgo, contados sin rodeos.</p></div>
+        <div class="tt-actions">
+          <div class="tt-nav"><button id="ttPrev" aria-label="Anterior">←</button><button id="ttNext" aria-label="Siguiente">→</button></div>
+          <a class="btn btn-dark" href="https://www.tiktok.com/@modo_fabrica" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 4.9 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg>Seguir @modo_fabrica</a>
+        </div>
+      </div>
+      <div class="tabs reveal" role="tablist">
+        <button class="on" data-tab="reel" role="tab">Destacados</button>
+        <button data-tab="live" role="tab"><span class="live"></span>Lo más reciente</button>
+      </div>
+      <div class="reel" id="reel"></div>
+      <div class="live-feed" id="live" hidden>
+        <p class="live-note">Se actualiza automáticamente con cada video nuevo de @modo_fabrica.</p>
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@modo_fabrica" data-unique-id="modo_fabrica" data-embed-type="creator" style="max-width: 780px; min-width: 288px;"><section><a target="_blank" href="https://www.tiktok.com/@modo_fabrica?refer=creator_embed">@modo_fabrica</a></section></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="player" id="player">
+    <button class="close" id="playerClose" aria-label="Cerrar">×</button>
+    <div class="frame"><iframe id="playerFrame" title="Video de TikTok" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>
+    <a class="open-tt" id="playerLink" target="_blank" rel="noopener">Ver en TikTok ↗</a>
+  </dialog>
+
+  <!-- 11. FORMACIÓN -->
+  <section id="formacion">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Formación continua</span><h2>+50 certificaciones <span class="hl">aplicadas al negocio.</span></h2></div>
+        <p>Aprendizaje autodirigido en 6 áreas: las que permiten gestionar una operación completa, no solo un área técnica.</p>
+      </div>
+      <div class="edu-grid">
+        <div class="area reveal"><b>15</b><h4>Gestión de proyectos</h4><p>Alcance, riesgos, stakeholders, presupuesto y cronograma.</p></div>
+        <div class="area reveal"><b>13</b><h4>Mejora continua y Six Sigma</h4><p>Green/Black Belt, Kaizen, DMAIC y estadística aplicada.</p></div>
+        <div class="area reveal"><b>10</b><h4>Ventas y negociación</h4><p>Negociación, persuasión y storytelling comercial.</p></div>
+        <div class="area reveal"><b>4</b><h4>Cadena de suministro</h4><p>Dashboards logísticos con Power Query y Power Pivot.</p></div>
+        <div class="area reveal"><b>4</b><h4>Marketing digital</h4><p>Contenidos, email marketing y plan de marketing.</p></div>
+        <div class="area reveal"><b>2</b><h4>Finanzas y cambio</h4><p>Finanzas para no financieros y gestión del cambio.</p></div>
+      </div>
+      <div class="certs reveal">
+        <span><b>IA (Claude) aplicada a pymes</b> · Anthropic</span>
+        <span><b>Lean y Six Sigma</b> · LinkedIn Learning</span>
+        <span><b>ISO 9001:2015</b> · Ibnorca</span>
+        <span><b>ISO 22000</b> · Inocuidad alimentaria</span>
+        <span><b>Ingeniería</b> · UMSS</span>
+        <span><b>Diplomado en E-learning</b> · UMSS</span>
+        <span><b>Diplomado en Marketing Inmobiliario</b> · UPB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="reveal">
+          <span class="eyebrow">Hablemos</span>
+          <h2>¿Tu operación puede dar <span class="hl">más resultados?</span></h2>
+          <p class="sub">En 15 minutos te digo dónde está la oportunidad más rápida en tu planta: costos, inventario, calidad o equipo. Sin compromiso.</p>
+          <div class="who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Te responde personalmente · Santa Cruz, Bolivia</span></div></div>
+        </div>
+        <div class="contact-actions reveal">
+          <a class="btn btn-wa" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20conversar%20sobre%20mi%20operaci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>Escríbeme por WhatsApp</a>
+          <a class="btn btn-primary" href="mailto:adriancopa365@gmail.com?subject=Quiero%20conversar%20sobre%20mi%20operaci%C3%B3n">Enviar un email</a>
+          <a class="btn btn-ghost" href="assets/CV_Adrian_Copa_2026.pdf" download>Descargar CV (PDF)</a>
+        </div>
+      </div>
+      <div class="channels">
+        <a href="mailto:adriancopa365@gmail.com"><small>EMAIL</small>adriancopa365@gmail.com</a>
+        <a href="https://wa.me/59175971526" target="_blank" rel="noopener"><small>WHATSAPP</small>+591 759 71526</a>
+        <a href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><small>LINKEDIN</small>/in/adrian-copa-jara</a>
+        <a href="https://www.tiktok.com/@modo_fabrica" target="_blank" rel="noopener"><small>TIKTOK</small>@modo_fabrica</a>
+      </div>
+      <footer><span>© 2026 Adrian Copa · Gerente de Operaciones</span><span>Santa Cruz, Bolivia</span></footer>
+    </div>
+  </section>
+</main>
+
+<!-- sticky CTA on mobile -->
+<div class="mbar" id="mbar">
+  <a class="btn btn-wa" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20conversar." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Hablemos por WhatsApp</a>
+  <a class="btn btn-ghost" href="assets/CV_Adrian_Copa_2026.pdf" download>CV</a>
+</div>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ---------- TikTok reel ---------- */
+  const VIDEOS = [
+    ['7663443793668066568', '¿Por qué tu fábrica vende y vende… y a fin de mes el dinero desaparece?', '#1'],
+    ['7664260424602258695', 'No conocer cuánto ganas realmente al vender cada producto.', '#2'],
+    ['7659878166382595346', 'La variación de calidad es lo que más rechazos genera. Mantenerla es lo que posiciona tu marca.'],
+    ['7658228627552619783', 'El retraso que se repite: cuando algo se repite, no es mala suerte. Es sistema.'],
+    ['7658989211449593106', 'La responsabilidad es clave para liderar: si nadie se hace cargo, el proceso no avanza.'],
+    ['7582196926548806923', 'Cómo mejorar tu pyme: tu misión es crear procesos, no apagar incendios.'],
+    ['7581924276819889420', 'Inventario lleno no es éxito: casi siempre es dinero estancado.'],
+    ['7578286602925952268', '¿Tu empresa no despega? Compras sin plan, producción por intuición y stock sin rotación.'],
+    ['7577482888036322571', '¿Tu pyme no crece porque el dueño vive apagando incendios?'],
+  ];
+  const reel = document.getElementById('reel');
+  reel.innerHTML = VIDEOS.map(([id, cap, chip]) => `
+    <button class="clip" data-id="${id}" aria-label="Reproducir: ${cap.replace(/"/g, '')}">
+      <img src="assets/tiktok/${id}.jpg" alt="" loading="lazy" width="360" height="640" />
+      ${chip ? `<span class="chip">100 errores · ${chip}</span>` : ''}
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="cap">${cap}</span>
+    </button>`).join('');
+  const step = () => reel.querySelector('.clip').offsetWidth + 16;
+  document.getElementById('ttPrev').onclick = () => reel.scrollBy({ left: -step() * 2, behavior: 'smooth' });
+  document.getElementById('ttNext').onclick = () => reel.scrollBy({ left: step() * 2, behavior: 'smooth' });
+  // Tabs: curated reel vs. TikTok's official creator feed (always up to date).
+  let liveLoaded = false;
+  document.querySelector('.tabs').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll('.tabs button').forEach((x) => x.classList.toggle('on', x === b));
+    const live = b.dataset.tab === 'live';
+    reel.hidden = live; document.getElementById('live').hidden = !live;
+    document.querySelector('.tt-nav').style.visibility = live ? 'hidden' : '';
+    if (live && !liveLoaded) {
+      liveLoaded = true;
+      const s = document.createElement('script'); s.src = 'https://www.tiktok.com/embed.js'; s.async = true; document.body.appendChild(s);
+    }
+  });
+  const dlg = document.getElementById('player'), frame = document.getElementById('playerFrame');
+  reel.addEventListener('click', (e) => {
+    const clip = e.target.closest('.clip'); if (!clip) return;
+    frame.src = `https://www.tiktok.com/player/v1/${clip.dataset.id}?autoplay=1&music_info=0&description=0&rel=0`;
+    document.getElementById('playerLink').href = `https://www.tiktok.com/@modo_fabrica/video/${clip.dataset.id}`;
+    dlg.showModal();
+  });
+  document.getElementById('playerClose').onclick = () => dlg.close();
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => { frame.src = 'about:blank'; });
+
+  /* ---------- count-up (values are pre-filled so they read correctly without JS) ---------- */
+  const countUp = (el) => {
+    if (reduced) return;
+    const target = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), t0 = performance.now(), dur = 1400;
+    const tick = (t) => {
+      const k = Math.min((t - t0) / dur, 1), v = target * (1 - Math.pow(1 - k, 3));
+      el.textContent = v.toFixed(dec).replace('.', ',');
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  /* ---------- scroll: reveal, progress, active section, sticky mobile CTA ---------- */
+  const nav = document.getElementById('nav'), bar = document.getElementById('progress'), mbar = document.getElementById('mbar');
+  const contact = document.getElementById('contacto');
+  const pending = [...document.querySelectorAll('.reveal')];
+  pending.forEach((el) => {
+    const sibs = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+    if (!el.style.transitionDelay) el.style.transitionDelay = `${Math.min(sibs.indexOf(el), 5) * 0.07}s`;
+  });
+  const navLinks = [...document.querySelectorAll('.nav-links a, .chips a')];
+  const ids = [...new Set(navLinks.map((a) => a.getAttribute('href')))];
+  const secs = ids.map((id) => document.querySelector(id));
+  const chipsBox = document.querySelector('.chips');
+  let lastActive = null, ticking = false;
+  const onScroll = () => {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+      nav.classList.toggle('scrolled', scrollY > 10);
+      const limit = innerHeight * 0.92;
+      for (let i = pending.length - 1; i >= 0; i--) {
+        const el = pending[i];
+        if (el.getBoundingClientRect().top < limit) { el.classList.add('in'); el.querySelectorAll('[data-count]').forEach(countUp); pending.splice(i, 1); }
+      }
+      let cur = null;
+      secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * 0.35) cur = ids[i]; });
+      if (cur !== lastActive) {
+        lastActive = cur;
+        navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === cur));
+        const chip = chipsBox.querySelector(`a[href="${cur}"]`);
+        if (chip && getComputedStyle(chipsBox).display !== 'none') chipsBox.scrollTo({ left: chip.offsetLeft - 16, behavior: 'smooth' });
+      }
+      const cr = contact.getBoundingClientRect();
+      mbar.classList.toggle('show', scrollY > innerHeight * 0.6 && cr.top > innerHeight * 0.8);
+    });
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+
+  /* ---------- timeline accordion ---------- */
+  document.querySelectorAll('.job').forEach((job) => job.addEventListener('click', () => job.classList.toggle('open')));
+
+  /* ---------- books: tap to bring forward ---------- */
+  document.querySelectorAll('.book-wrap').forEach((b) => b.querySelector('.book').addEventListener('click', () => {
+    document.querySelectorAll('.book-wrap.front').forEach((o) => o !== b && o.classList.remove('front'));
+    b.classList.toggle('front');
+  }));
+
+  /* ---------- latest blog posts (data/posts.json) ---------- */
+  const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'];
+  const fmtFecha = (s) => { const [y, m, d] = s.split('-').map(Number); return `${d} ${MESES[m - 1]} ${y}`; };
+  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const SEG = {
+    'Costos y rentabilidad': ['#e0622f', '#9a3412'], 'Inventarios y logística': ['#14a394', '#0f5f57'],
+    'Calidad': ['#1f9d57', '#14532d'], 'Producción y mejora continua': ['#2f6fe0', '#1e3a8a'],
+    'Planificación, datos e IA': ['#7a3fc9', '#3b1f6b'], 'Liderazgo y equipos': ['#d97706', '#7c3a06'],
+    'Carrera profesional': ['#db2777', '#831843'], 'Pymes y emprendimiento': ['#26344a', '#0f1b2d'],
+  };
+  fetch('data/posts.json', { cache: 'no-cache' }).then((r) => r.json()).then((posts) => {
+    posts.sort((a, b) => b.fecha.localeCompare(a.fecha));
+    const seg = (p) => (p.etiquetas || [])[0] || 'Pymes y emprendimiento';
+    document.getElementById('posts').innerHTML = posts.slice(0, 3).map((p) => {
+      const img = p.imagen || (p.tiktok ? `assets/tiktok/${p.tiktok}.jpg` : '');
+      const [c1, c2] = SEG[seg(p)] || SEG['Pymes y emprendimiento'];
+      const media = img ? `<img src="${esc(img)}" alt="" loading="lazy" />` : `<div class="cover" style="--c1:${c1};--c2:${c2}"><b>${esc(p.titulo)}</b></div>`;
+      return `<a class="post reveal in" href="blog.html#${esc(p.slug)}">
+        <div class="thumb">${media}<div class="src">${p.linkedin ? '<span class="li">LinkedIn</span>' : ''}${p.tiktok ? '<span class="tt">TikTok</span>' : ''}<span>${esc(seg(p))}</span></div></div>
+        <div class="post-body"><time>${fmtFecha(p.fecha)}</time><h3>${esc(p.titulo)}</h3><p>${esc(p.resumen)}</p><span class="read link-arrow">Leer <span>→</span></span></div>
+      </a>`;
+    }).join('');
+    const counts = {}; posts.forEach((p) => { counts[seg(p)] = (counts[seg(p)] || 0) + 1; });
+    document.getElementById('topics').innerHTML = `<span class="topics-label">${posts.length} publicaciones por tema:</span>` + Object.keys(counts).sort((a, b) => counts[b] - counts[a]).map((t) =>
+      `<a href="blog.html?tema=${encodeURIComponent(t)}" style="--c1:${(SEG[t] || SEG['Pymes y emprendimiento'])[0]}">${esc(t)} <b>${counts[t]}</b></a>`).join('');
+  }).catch(() => { document.getElementById('blog').style.display = 'none'; });
+
+  /* ---------- filter achievements by company ---------- */
+  document.getElementById('numFilter').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll('#numFilter button').forEach((x) => x.classList.toggle('on', x === b));
+    document.querySelectorAll('#nums .n[data-c]').forEach((n) => n.classList.toggle('hide', b.dataset.f !== 'all' && n.dataset.c !== b.dataset.f));
+  });
+
+  /* ---------- rotating role badges around the portrait ---------- */
+  const IC = {
+    factory: '<path d="M3 21h18M5 21V10l5 3V10l5 3V6l4 2v13"/>',
+    shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+    flask: '<path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3"/><path d="M7 15h10"/>',
+    deal: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+    pin: '<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+    brief: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/>',
+    book: '<path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2zM20 19v3H6"/>',
+    lean: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+    chip: '<rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M19 9h3M19 15h3M2 9h3M2 15h3"/>',
+    play: '<circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/>',
+  };
+  const COL = { o: ['#e0622f', '#fbe9e0'], b: ['#1f63c6', '#e3edfb'], g: ['#1f9d57', '#e1f4e8'], p: ['#7a3fc9', '#efe6fa'] };
+  const SLOTS = [
+    [['factory', 'Gerente de Operaciones', 'Novaquimica SRL', 'o'], ['shield', 'Jefe de Aseguramiento de Calidad', 'Unilever Bolivia', 'b'], ['flask', 'Jefe de Calidad y Elaboración', 'Astrix S.A.', 'g']],
+    [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['pin', 'Gerente Regional', 'kocha Group · Cochabamba', 'o'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
+    [['book', 'Autor de 4 libros', 'Amazon · Hotmart', 'p'], ['lean', 'Lean · Six Sigma', 'S&OP · MRP · ISO 9001', 'g'], ['chip', 'Operaciones + IA', 'Dashboards automáticos', 'b'], ['play', 'Creador de Modo Fábrica', 'Consejos para pymes en TikTok', 'o']],
+  ];
+  const renderBadge = (el, item, n, i) => {
+    const [ic, t, s, c] = item;
+    el.style.setProperty('--c', COL[c][0]); el.style.setProperty('--c-bg', COL[c][1]);
+    el.innerHTML = `<div class="in-b"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[ic]}</svg></span><div><b>${t}</b><small>${s}</small></div></div><span class="dots">${Array.from({ length: n }, (_, k) => `<i class="${k === i ? 'on' : ''}"></i>`).join('')}</span>`;
+  };
+  document.querySelectorAll('.badge[data-slot]').forEach((el) => {
+    const list = SLOTS[+el.dataset.slot]; let i = 0;
+    renderBadge(el, list[0], list.length, 0);
+    if (reduced) return;
+    setTimeout(() => setInterval(() => {
+      el.querySelector('.in-b').classList.add('swap');
+      setTimeout(() => { i = (i + 1) % list.length; renderBadge(el, list[i], list.length, i); }, 350);
+    }, 3800), +el.dataset.slot * 1200);
+  });
+
+  /* ---------- hero KPI cards flip through achievements ---------- */
+  document.querySelectorAll('#kpis .kpi').forEach((card, ci) => {
+    const faces = [...card.querySelectorAll('.face')], tick = card.querySelector('.tick');
+    if (reduced) return;
+    let i = 0;
+    const next = () => {
+      const cur = faces[i];
+      cur.classList.remove('on'); cur.classList.add('out');
+      setTimeout(() => cur.classList.remove('out'), 600);
+      i = (i + 1) % faces.length; faces[i].classList.add('on');
+      tick.classList.remove('run'); void tick.offsetWidth; tick.classList.add('run');
+    };
+    setTimeout(() => { tick.classList.add('run'); setInterval(next, 3600); }, ci * 500);
+  });
+
+  /* ---------- subtle 3D tilt on the portrait (desktop only) ---------- */
+  if (finePointer && !reduced) {
+    const visual = document.getElementById('visual'), photo = document.getElementById('photo');
+    visual.addEventListener('pointermove', (e) => {
+      const r = visual.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      photo.style.transform = `rotateX(${-y * 7}deg) rotateY(${x * 7}deg)`;
+    });
+    visual.addEventListener('pointerleave', () => { photo.style.transform = ''; });
+  }
+</script>
+</body>
+</html>
