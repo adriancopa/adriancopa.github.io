@@ -110,12 +110,16 @@
 
     /* ---------- hero ---------- */
     .hero { padding: 56px 0 40px; }
-    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+    /* align-items: start (not center) — the copy column is much taller than the portrait once the
+       h1 wraps to 3-4 lines, and centering the shorter photo column against it slides the photo
+       up over the heading. Top-aligning + a small nudge keeps the photo level with the h1 instead. */
+    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: start; }
+    .visual { margin-top: 84px; }
     .hero-grid > * { min-width: 0; }
     .hello { display: flex; align-items: center; gap: 12px; font-family: var(--head); font-weight: 700; font-size: 18px; color: var(--ink-2); }
     .hello img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; display: none; border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent); }
     .hello .hi { font-weight: 500; color: var(--muted); }
-    .role-pill { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 7px 14px 7px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; font-weight: 500; color: var(--ink-2); box-shadow: var(--shadow); }
+    .role-pill { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 7px 14px 7px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; font-weight: 500; color: var(--ink-2); box-shadow: var(--shadow); white-space: nowrap; }
     .live { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(31,157,87,.16); flex: none; animation: pulse 2.4s infinite; }
     @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(31,157,87,.04); } }
     .hero h1 { font-size: clamp(40px, 5.6vw, 72px); font-weight: 800; letter-spacing: -.035em; line-height: 1.02; margin: 22px 0 20px; }
@@ -172,9 +176,11 @@
     .badge small { display: block; font-size: 12px; color: var(--muted); line-height: 1.25; }
     /* Stacked top-down with a cleared band at the bottom for .photo-cap — never bottom-anchored,
        so the float animation (which only lifts upward) can't drift a badge into the caption. */
-    .badge.b1 { top: 4%; left: -12%; }
+    /* Left offsets stay well inside the 56px column gap (see .hero-grid) so a badge can never
+       bleed into the heading column, whatever line count the h1 wraps to at a given viewport. */
+    .badge.b1 { top: 4%; left: -8%; }
     .badge.b2 { top: 31%; right: -10%; animation-delay: -2s; }
-    .badge.b3 { top: 58%; left: -14%; animation-delay: -4s; }
+    .badge.b3 { top: 58%; left: -8%; animation-delay: -4s; }
     @keyframes float { 50% { transform: translateY(-10px); } }
 
     /* explore tiles */
@@ -434,9 +440,9 @@
     .channels a:hover { color: var(--accent); }
     .channels small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: #7f8aa0; margin-bottom: 4px; }
     footer { margin-top: 50px; font-size: 13px; color: #7f8aa0; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .visits { display: inline-flex; align-items: center; gap: 7px; }
+    .visits { display: inline-flex; align-items: center; gap: 6px; }
     .visits svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
-    .visits img { display: block; border-radius: 4px; }
+    .visits b { font-weight: 700; color: #dfe4ec; }
 
     /* ---------- mobile sticky CTA ---------- */
     .mbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 80; display: none; gap: 10px; padding: 10px; border-radius: 16px; background: rgba(15,27,45,.92); backdrop-filter: blur(12px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5); transform: translateY(140%); transition: transform .45s var(--ease); }
@@ -486,7 +492,8 @@
       .hero-copy .kpis { margin-top: 18px; }
       .hero-copy .more-proof { margin-top: 10px; }
       .hero-copy .cta { order: 2; margin-top: 16px; }
-      .hero-copy .role-pill { align-self: flex-start; font-size: 12.5px; }
+      .hero-copy .role-pill { align-self: flex-start; font-size: 12.5px; white-space: normal; }
+      .visual { margin-top: 0; }
       .hello { font-size: 16px; }
       .hello img { width: 44px; height: 44px; }
       .hero h1 { font-size: clamp(32px, 9vw, 42px); margin: 14px 0 12px; }
@@ -577,7 +584,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="hello reveal"><img src="assets/foto-perfil.jpg" alt="Adrian Copa" width="52" height="52" /><span><span class="hi">Hola, soy</span> Adrian Copa</span></p>
-          <span class="role-pill reveal"><span class="live"></span>Transformador de Operaciones Industriales · Consumo masivo (Home &amp; Personal Care)</span>
+          <span class="role-pill reveal"><span class="live"></span>Transformador de Operaciones Industriales · Consumo masivo</span>
           <div class="creds" id="creds" role="list" aria-label="Cargos y credenciales"></div>
           <h1 class="reveal">Transformo procesos ineficientes en <span class="hl">resultados medibles.</span></h1>
           <p class="lead reveal">Más de 10 años en <b>Unilever, Astrix y Novaquimica</b> haciendo que las fábricas <b>vendan más, gasten menos</b> y no dependan de una sola persona.</p>
@@ -643,7 +650,7 @@
   <div class="trust">
     <div class="wrap trust-in">
       <p>Experiencia en</p>
-      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span></div>
+      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span><span>kocha Group</span></div>
     </div>
   </div>
 
@@ -993,28 +1000,44 @@
           <div class="detail" id="job-d3" role="region"><div><ul><li>Planes comerciales y campañas de marketing; ventas mayoristas B2B y gestión de cuentas clave.</li></ul></div></div>
         </article>
         <article class="job">
-          <div class="when">Oct 2021 — May 2023</div>
-          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d4">Especialización profesional</button></h3><p class="org"><b>Formación autodirigida</b> · Operaciones, proyectos y negocio</p><span class="hit">+50 certificaciones</span></div>
+          <div class="when">Feb 2023 — Jun 2023</div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d4">Gerente Regional</button></h3><p class="org"><b>kocha Group</b> · Cochabamba, Bolivia</p><span class="hit">+157% ventas</span></div>
           <div class="plus">+</div>
           <div class="detail" id="job-d4" role="region"><div><ul>
-            <li><b>+50 cursos y certificaciones</b> en LinkedIn Learning: Lean Six Sigma (Green/Black Belt), gestión de proyectos, cadena de suministro, ventas, marketing y finanzas.</li>
-            <li>Base para pasar de la calidad a la gestión integral de una operación: comercial, finanzas y equipo.</li>
+            <li>Gestión integral de una pyme: ventas mensuales de <b>Bs 70.000 a Bs 180.000</b> (+157%).</li>
+            <li>Tiempos de entrega -20% y 15% de ahorro operativo.</li>
+          </ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">Jun 2021 — Ene 2022</div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d5">Supervisor de Producción</button></h3><p class="org"><b>Industrias Luri SRL</b></p></div>
+          <div class="plus">+</div>
+          <div class="detail" id="job-d5" role="region"><div><ul>
+            <li>Supervisión de línea de producción y coordinación de turnos en una industria de consumo masivo.</li>
+          </ul></div></div>
+        </article>
+        <article class="job">
+          <div class="when">2021 · 3 meses</div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d6">Desarrollo e Investigación</button></h3><p class="org"><b>INDUQUIN</b> · Productos de limpieza</p></div>
+          <div class="plus">+</div>
+          <div class="detail" id="job-d6" role="region"><div><ul>
+            <li>Desarrollo e investigación de fórmulas para productos de limpieza.</li>
           </ul></div></div>
         </article>
         <article class="job">
           <div class="when">Ene 2020 — Sept 2021</div>
-          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d5">Jefe de Aseguramiento de la Calidad</button></h3><p class="org"><b>Unilever</b> · Bolivia</p><span class="hit">-90% no conformidades</span></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d7">Jefe de Aseguramiento de la Calidad</button></h3><p class="org"><b>Unilever</b> · Bolivia</p><span class="hit">-90% no conformidades</span></div>
           <div class="plus">+</div>
-          <div class="detail" id="job-d5" role="region"><div><ul>
+          <div class="detail" id="job-d7" role="region"><div><ul>
             <li>Calidad de correctiva a preventiva a nivel nacional: de <b>250 casos/año a 1–2 por mes</b>.</li>
             <li>100% de cumplimiento en auditorías internas y externas; lanzamientos 15% más rápidos.</li>
           </ul></div></div>
         </article>
         <article class="job">
           <div class="when">Ene 2015 — Dic 2019</div>
-          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d6">Calidad, Elaboración y Procesos</button></h3><p class="org"><b>Astrix S.A.</b> · Home Care y Personal Care</p><span class="hit">USD 35K/año de ahorro</span></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d8">Calidad, Elaboración y Procesos</button></h3><p class="org"><b>Astrix S.A.</b> · Home Care y Personal Care</p><span class="hit">USD 35K/año de ahorro</span></div>
           <div class="plus">+</div>
-          <div class="detail" id="job-d6" role="region"><div>
+          <div class="detail" id="job-d8" role="region"><div>
             <p class="job-sub">Jefe de Aseguramiento de la Calidad · Supervisor de Elaboración · Asistente de Procesos</p>
             <ul>
               <li>Eficiencia de procesos +20%, defectos -15% y costos de materiales -10%.</li>
@@ -1158,7 +1181,7 @@
       </div>
       <footer>
         <span>© 2026 Adrian Copa · Transformador de Operaciones Industriales</span>
-        <span class="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><img src="https://hits.sh/adriancopa.github.io.svg?label=visitas&color=e0622f&style=flat" alt="Contador de visitas a adriancopa.github.io" width="90" height="20" loading="lazy" /></span>
+        <span class="visits" id="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b id="visitsCount">2.482</b> visitas</span>
         <span>Santa Cruz, Bolivia</span>
       </footer>
     </div>
@@ -1174,6 +1197,18 @@
 <script>
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ---------- automatic visit counter (shared across index.html + blog.html) ---------- */
+  (function () {
+    const el = document.getElementById('visitsCount');
+    if (!el) return;
+    const already = sessionStorage.getItem('adriancopa_visited');
+    const ep = already ? 'get' : 'hit';
+    fetch(`https://abacus.jasoncameron.dev/${ep}/adriancopa-portfolio/visitas`)
+      .then((r) => r.json())
+      .then((d) => { el.textContent = Number(d.value).toLocaleString('es-BO'); sessionStorage.setItem('adriancopa_visited', '1'); })
+      .catch(() => {}); // leave the static fallback number already in the markup
+  })();
 
   /* ---------- TikTok reel ---------- */
   const VIDEOS = [
@@ -1342,7 +1377,7 @@
   const COL = { o: ['#e0622f', '#fbe9e0'], b: ['#1f63c6', '#e3edfb'], g: ['#1f9d57', '#e1f4e8'], p: ['#7a3fc9', '#efe6fa'] };
   const SLOTS = [
     [['factory', 'Gerente de Operaciones', 'Novaquimica SRL', 'o'], ['shield', 'Jefe de Aseguramiento de Calidad', 'Unilever Bolivia', 'b'], ['flask', 'Jefe de Calidad y Elaboración', 'Astrix S.A.', 'g']],
-    [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['lean', '+50 certificaciones', 'Operaciones · Proyectos · Finanzas', 'o'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
+    [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['pin', 'Gerente Regional', 'kocha Group · Cochabamba', 'o'], ['lean', '+50 certificaciones', 'Operaciones · Proyectos · Finanzas', 'g'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
     [['book', 'Autor de 4 libros', 'Amazon · Hotmart', 'p'], ['lean', 'Lean · Six Sigma', 'S&OP · MRP · ISO 9001', 'g'], ['chip', 'Operaciones + IA', 'Dashboards automáticos', 'b'], ['play', 'Creador de Modo Fábrica', 'Consejos para pymes en TikTok', 'o']],
   ];
   const renderBadge = (el, item, n, i) => {
