@@ -1,6 +1,6 @@
 # Portafolio de Adrian Copa
 
-Gerente de Operaciones · Consumo masivo (Home & Personal Care).
+Transformador de Operaciones Industriales · Consumo masivo (Home & Personal Care).
 Sitio estático publicado con GitHub Pages.
 
 - `index.html` — portafolio principal.

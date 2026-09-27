@@ -86,7 +86,10 @@
     .more { display: flex; justify-content: center; padding-bottom: 90px; }
     .grid { padding-bottom: 30px; }
     .seg-pill { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #fff; background: var(--c1); margin-left: 8px; vertical-align: middle; }
-    footer { border-top: 1px solid var(--line); padding: 26px 0; font-size: 13px; color: var(--muted); text-align: center; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0; font-size: 13px; color: var(--muted); text-align: center; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 14px; }
+    .visits { display: inline-flex; align-items: center; gap: 7px; }
+    .visits svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
+    .visits img { display: block; border-radius: 4px; }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .wrap { padding: 0 16px; } .grid { grid-template-columns: 1fr; } .nav .btn-li span { display: none; } .hero { padding-top: 36px; } }
   </style>
@@ -103,7 +106,10 @@
 </header>
 
 <main class="wrap" id="app"></main>
-<footer>© 2026 Adrian Copa · Gerente de Operaciones · <a href="index.html#contacto" style="color:var(--accent);font-weight:600">Hablemos</a></footer>
+<footer>
+  <span>© 2026 Adrian Copa · Transformador de Operaciones Industriales · <a href="index.html#contacto" style="color:var(--accent);font-weight:600">Hablemos</a></span>
+  <span class="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><img src="https://hits.sh/adriancopa.github.io.svg?label=visitas&color=e0622f&style=flat" alt="Contador de visitas a adriancopa.github.io" width="90" height="20" loading="lazy" /></span>
+</footer>
 
 <script>
   const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -175,7 +181,7 @@
           ${p.tiktok ? `<iframe class="tt-frame" src="https://www.tiktok.com/player/v1/${esc(p.tiktok)}?music_info=0&description=0&rel=0" title="Video en TikTok" allow="encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>` : ''}
         </div>
         ${p.linkedin ? `<p style="text-align:center"><a class="btn btn-li" href="${esc(p.linkedin)}" target="_blank" rel="noopener">Ver y comentar en LinkedIn →</a></p>` : ''}
-        <div class="author"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Gerente de Operaciones · Transformo procesos ineficientes en resultados medibles.</span></div><a class="btn btn-primary" href="index.html#contacto">Hablemos →</a></div>
+        <div class="author"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Transformador de Operaciones Industriales · Transformo procesos ineficientes en resultados medibles.</span></div><a class="btn btn-primary" href="index.html#contacto">Hablemos →</a></div>
       </article>`;
     scrollTo(0, 0);
   }

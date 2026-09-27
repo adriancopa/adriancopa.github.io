@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adrian Copa · Gerente de Operaciones | Consumo masivo</title>
-  <meta name="description" content="Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles: 3,5x facturación, Bs 190K de caja liberada, -90% en fallas de calidad." />
+  <title>Adrian Copa · Transformador de Operaciones Industriales</title>
+  <meta name="description" content="Transformador de Operaciones Industriales en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles: 3,5x facturación, Bs 190K de caja liberada, -90% en fallas de calidad." />
   <link rel="canonical" href="https://adriancopa.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Adrian Copa" />
   <meta property="og:url" content="https://adriancopa.github.io/" />
   <meta property="og:title" content="Adrian Copa · Transformo procesos ineficientes en resultados medibles" />
-  <meta property="og:description" content="Gerente de Operaciones en consumo masivo. 3,5x facturación · Bs 190K de caja liberada · -90% fallas de calidad. Casos de éxito, libros y blog." />
+  <meta property="og:description" content="Transformador de Operaciones Industriales en consumo masivo. 3,5x facturación · Bs 190K de caja liberada · -90% fallas de calidad. Casos de éxito, libros y blog." />
   <meta property="og:image" content="https://adriancopa.github.io/assets/foto-perfil.jpg" />
   <meta property="og:image:width" content="640" />
   <meta property="og:image:height" content="640" />
   <meta property="og:locale" content="es_BO" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Adrian Copa Jara", "alternateName": "Adrian Copa", "jobTitle": "Gerente de Operaciones", "description": "Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles.", "url": "https://adriancopa.github.io/", "image": "https://adriancopa.github.io/assets/foto-perfil.jpg", "email": "mailto:adriancopa365@gmail.com", "telephone": "+59175971526", "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressRegion": "Santa Cruz", "addressCountry": "BO"}, "worksFor": {"@type": "Organization", "name": "Novaquimica SRL"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Mayor de San Simón"}, "knowsAbout": ["Gestión de operaciones", "Planificación de la producción", "S&OP", "MRP", "Lean Six Sigma", "Mejora continua", "ISO 9001", "Gestión de inventarios", "Control de costos", "Consumo masivo", "Home & Personal Care"], "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-copa-jara", "https://www.tiktok.com/@modo_fabrica"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Adrian Copa Jara", "alternateName": "Adrian Copa", "jobTitle": "Transformador de Operaciones Industriales", "description": "Transformador de Operaciones Industriales en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles.", "url": "https://adriancopa.github.io/", "image": "https://adriancopa.github.io/assets/foto-perfil.jpg", "email": "mailto:adriancopa365@gmail.com", "telephone": "+59175971526", "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressRegion": "Santa Cruz", "addressCountry": "BO"}, "worksFor": {"@type": "Organization", "name": "Novaquimica SRL"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Mayor de San Simón"}, "knowsAbout": ["Gestión de operaciones", "Planificación de la producción", "S&OP", "MRP", "Lean Six Sigma", "Mejora continua", "ISO 9001", "Gestión de inventarios", "Control de costos", "Consumo masivo", "Home & Personal Care"], "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-copa-jara", "https://www.tiktok.com/@modo_fabrica"]}</script>
   <link rel="icon" href="assets/foto-perfil.jpg" />
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -170,9 +170,11 @@
     .badge .ic svg { width: 19px; height: 19px; }
     .badge b { display: block; font-family: var(--head); font-weight: 800; font-size: 14px; line-height: 1.2; }
     .badge small { display: block; font-size: 12px; color: var(--muted); line-height: 1.25; }
-    .badge.b1 { top: 8%; left: -12%; }
-    .badge.b2 { top: 44%; right: -10%; animation-delay: -2s; }
-    .badge.b3 { bottom: 20%; left: -14%; animation-delay: -4s; }
+    /* Stacked top-down with a cleared band at the bottom for .photo-cap — never bottom-anchored,
+       so the float animation (which only lifts upward) can't drift a badge into the caption. */
+    .badge.b1 { top: 4%; left: -12%; }
+    .badge.b2 { top: 31%; right: -10%; animation-delay: -2s; }
+    .badge.b3 { top: 58%; left: -14%; animation-delay: -4s; }
     @keyframes float { 50% { transform: translateY(-10px); } }
 
     /* explore tiles */
@@ -431,7 +433,10 @@
     .channels a { transition: color .2s; overflow-wrap: anywhere; font-size: 15px; }
     .channels a:hover { color: var(--accent); }
     .channels small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: #7f8aa0; margin-bottom: 4px; }
-    footer { margin-top: 50px; font-size: 13px; color: #7f8aa0; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    footer { margin-top: 50px; font-size: 13px; color: #7f8aa0; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .visits { display: inline-flex; align-items: center; gap: 7px; }
+    .visits svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
+    .visits img { display: block; border-radius: 4px; }
 
     /* ---------- mobile sticky CTA ---------- */
     .mbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 80; display: none; gap: 10px; padding: 10px; border-radius: 16px; background: rgba(15,27,45,.92); backdrop-filter: blur(12px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5); transform: translateY(140%); transition: transform .45s var(--ease); }
@@ -539,7 +544,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a href="#top" class="brand"><img src="assets/foto-perfil.jpg" alt="" width="38" height="38" /><div><b>Adrian Copa</b><small>Gerente de Operaciones</small></div></a>
+    <a href="#top" class="brand"><img src="assets/foto-perfil.jpg" alt="" width="38" height="38" /><div><b>Adrian Copa</b><small>Transformador de Operaciones Industriales</small></div></a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="#servicios">Qué hago</a>
       <a href="#casos">Casos</a>
@@ -572,7 +577,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="hello reveal"><img src="assets/foto-perfil.jpg" alt="Adrian Copa" width="52" height="52" /><span><span class="hi">Hola, soy</span> Adrian Copa</span></p>
-          <span class="role-pill reveal"><span class="live"></span>Gerente de Operaciones · Consumo masivo (Home &amp; Personal Care)</span>
+          <span class="role-pill reveal"><span class="live"></span>Transformador de Operaciones Industriales · Consumo masivo (Home &amp; Personal Care)</span>
           <div class="creds" id="creds" role="list" aria-label="Cargos y credenciales"></div>
           <h1 class="reveal">Transformo procesos ineficientes en <span class="hl">resultados medibles.</span></h1>
           <p class="lead reveal">Más de 10 años en <b>Unilever, Astrix y Novaquimica</b> haciendo que las fábricas <b>vendan más, gasten menos</b> y no dependan de una sola persona.</p>
@@ -612,9 +617,9 @@
 
         <div class="visual reveal" id="visual">
           <div class="photo-card" id="photo">
-            <img src="assets/foto-perfil.jpg" alt="Adrian Copa, Gerente de Operaciones" width="640" height="640" />
+            <img src="assets/foto-perfil.jpg" alt="Adrian Copa, Transformador de Operaciones Industriales" width="640" height="640" />
             <div class="photo-cap">
-              <div><b>Adrian Copa</b><small>Gerente de Operaciones</small></div>
+              <div><b>Adrian Copa</b><small>Transformador de Operaciones Industriales</small></div>
               <div class="status"><span class="live"></span>Disponible</div>
             </div>
           </div>
@@ -915,7 +920,7 @@
       </div>
       <div class="quote reveal">
         <img src="assets/foto-perfil.jpg" alt="" width="84" height="84" />
-        <div><blockquote>“Cuando me voy de un puesto, el equipo que formé sigue sosteniendo el resultado. Esa es la mejor medida de mi trabajo.”</blockquote><cite>Adrian Copa · Gerente de Operaciones</cite></div>
+        <div><blockquote>“Cuando me voy de un puesto, el equipo que formé sigue sosteniendo el resultado. Esa es la mejor medida de mi trabajo.”</blockquote><cite>Adrian Copa · Transformador de Operaciones Industriales</cite></div>
       </div>
     </div>
   </section>
@@ -1064,7 +1069,7 @@
       <div class="topics reveal" id="topics"></div>
       <div class="posts" id="posts"></div>
       <div class="li-cta reveal">
-        <div class="li-who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Gerente de Operaciones · Consumo masivo</span></div></div>
+        <div class="li-who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Transformador de Operaciones Industriales · Consumo masivo</span></div></div>
         <p>Únete a los <b>1.773</b> profesionales que siguen mis <b class="li-posts">148</b> publicaciones en LinkedIn.</p>
         <div class="li-actions">
           <a class="btn btn-li btn-lg" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Seguir en LinkedIn</a>
@@ -1151,7 +1156,11 @@
         <a href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><small>LINKEDIN</small>/in/adrian-copa-jara</a>
         <a href="https://www.tiktok.com/@modo_fabrica" target="_blank" rel="noopener"><small>TIKTOK</small>@modo_fabrica</a>
       </div>
-      <footer><span>© 2026 Adrian Copa · Gerente de Operaciones</span><span>Santa Cruz, Bolivia</span></footer>
+      <footer>
+        <span>© 2026 Adrian Copa · Transformador de Operaciones Industriales</span>
+        <span class="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><img src="https://hits.sh/adriancopa.github.io.svg?label=visitas&color=e0622f&style=flat" alt="Contador de visitas a adriancopa.github.io" width="90" height="20" loading="lazy" /></span>
+        <span>Santa Cruz, Bolivia</span>
+      </footer>
     </div>
   </section>
 </main>
