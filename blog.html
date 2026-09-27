@@ -90,6 +90,9 @@
     .visits { display: inline-flex; align-items: center; gap: 6px; }
     .visits svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
     .visits b { font-weight: 700; color: var(--ink); }
+    .visits-top { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+    .visits-top svg { width: 14px; height: 14px; color: var(--accent); flex: none; }
+    .visits-top .visits-num { font-family: var(--head); font-weight: 800; color: var(--ink); }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .wrap { padding: 0 16px; } .grid { grid-template-columns: 1fr; } .nav .btn-li span { display: none; } .hero { padding-top: 36px; } }
   </style>
@@ -98,7 +101,8 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html"><img src="assets/foto-perfil.jpg" alt="" width="36" height="36" /><div><b>Adrian Copa</b><small>Blog</small></div></a>
-    <div style="display:flex; gap:8px">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap">
+      <span class="visits-top" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b class="visits-num">2.482</b><span class="visits-lbl">visitas</span></span>
       <a class="btn btn-ghost" href="index.html">← Portafolio</a>
       <a class="btn btn-li" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>Seguir</span></a>
     </div>
@@ -108,19 +112,23 @@
 <main class="wrap" id="app"></main>
 <footer>
   <span>© 2026 Adrian Copa · Transformador de Operaciones Industriales · <a href="index.html#contacto" style="color:var(--accent);font-weight:600">Hablemos</a></span>
-  <span class="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b id="visitsCount">2.482</b> visitas</span>
+  <span class="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b class="visits-num">2.482</b> visitas</span>
 </footer>
 
 <script>
-  /* ---------- automatic visit counter (shared with index.html) ---------- */
+  /* ---------- automatic visit counter (top nav + footer, shared with index.html) ---------- */
   (function () {
-    const el = document.getElementById('visitsCount');
-    if (!el) return;
+    const els = document.querySelectorAll('.visits-num');
+    if (!els.length) return;
     const already = sessionStorage.getItem('adriancopa_visited');
     const ep = already ? 'get' : 'hit';
     fetch(`https://abacus.jasoncameron.dev/${ep}/adriancopa-portfolio/visitas`)
       .then((r) => r.json())
-      .then((d) => { el.textContent = Number(d.value).toLocaleString('es-BO'); sessionStorage.setItem('adriancopa_visited', '1'); })
+      .then((d) => {
+        const text = Number(d.value).toLocaleString('es-BO');
+        els.forEach((el) => { el.textContent = text; });
+        sessionStorage.setItem('adriancopa_visited', '1');
+      })
       .catch(() => {});
   })();
 

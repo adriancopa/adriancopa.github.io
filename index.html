@@ -99,7 +99,8 @@
     .brand b { display: block; font-family: var(--head); font-weight: 800; font-size: 15.5px; line-height: 1.2; }
     .brand small { display: block; font-size: 12px; color: var(--muted); line-height: 1.2; }
     .nav-links { display: flex; gap: 4px; font-family: var(--head); font-weight: 600; font-size: 14px; }
-    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--ink-2); transition: background .2s, color .2s; }
+    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--ink-2); transition: background .2s, color .2s; white-space: nowrap; }
+    .nav-links { flex-shrink: 0; }
     .nav-links a:hover { background: var(--bg-2); }
     .nav-links a.active { background: var(--ink); color: #fff; }
     /* mobile section chips — always visible so every section is discoverable */
@@ -444,6 +445,12 @@
     .visits svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
     .visits b { font-weight: 700; color: #dfe4ec; }
 
+    /* visit counter, top of page */
+    .visits-top { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; background: var(--bg-2); border: 1px solid var(--line); font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+    .visits-top svg { width: 14px; height: 14px; color: var(--accent); flex: none; }
+    .visits-top .visits-num { font-family: var(--head); font-weight: 800; color: var(--ink); }
+    .visits-top-mobile { display: none; }
+
     /* ---------- mobile sticky CTA ---------- */
     .mbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 80; display: none; gap: 10px; padding: 10px; border-radius: 16px; background: rgba(15,27,45,.92); backdrop-filter: blur(12px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5); transform: translateY(140%); transition: transform .45s var(--ease); }
     .mbar.show { transform: none; }
@@ -459,6 +466,9 @@
       html { scroll-padding-top: 124px; }
       .nav-links { display: none; }
       .chips { display: flex; }
+      /* Desktop's inline pill next to the nav has no room here — show a full-width line instead. */
+      header .nav-in > .visits-top:not(.visits-top-mobile) { display: none; }
+      .visits-top-mobile { display: flex; justify-content: center; padding: 8px 12px; margin: 0 16px 10px; border-radius: 10px; }
       section { padding: 72px 0; }
       .hero { padding: 22px 0 28px; }
       .hero-grid, .sec-head, .contact-card { grid-template-columns: 1fr; }
@@ -561,6 +571,7 @@
       <a href="#blog">Blog</a>
       <a href="#videos">Videos</a>
     </nav>
+    <span class="visits-top" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b class="visits-num">2.482</b><span class="visits-lbl">visitas</span></span>
     <a href="#contacto" class="btn btn-primary" style="padding:11px 18px">Hablemos</a>
   </div>
   <nav class="chips" aria-label="Secciones">
@@ -574,6 +585,7 @@
     <a href="#videos">Videos</a>
     <a href="#contacto">Contacto</a>
   </nav>
+  <span class="visits-top visits-top-mobile" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b class="visits-num">2.482</b><span class="visits-lbl">visitas a esta página</span></span>
 </header>
 
 <main id="top">
@@ -1009,8 +1021,8 @@
           </ul></div></div>
         </article>
         <article class="job">
-          <div class="when">Jun 2021 — Ene 2022</div>
-          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d5">Supervisor de Producción</button></h3><p class="org"><b>Industrias Luri SRL</b></p></div>
+          <div class="when">Jun 2022 — Ene 2023</div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d5">Producción</button></h3><p class="org"><b>Industrias Luri SRL</b></p></div>
           <div class="plus">+</div>
           <div class="detail" id="job-d5" role="region"><div><ul>
             <li>Supervisión de línea de producción y coordinación de turnos en una industria de consumo masivo.</li>
@@ -1021,7 +1033,9 @@
           <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d6">Desarrollo e Investigación</button></h3><p class="org"><b>INDUQUIN</b> · Productos de limpieza</p></div>
           <div class="plus">+</div>
           <div class="detail" id="job-d6" role="region"><div><ul>
-            <li>Desarrollo e investigación de fórmulas para productos de limpieza.</li>
+            <li>Desarrollo e investigación de fórmulas para productos de limpieza del hogar.</li>
+            <li>Pruebas de estabilidad, rendimiento y control de calidad de nuevas formulaciones en laboratorio.</li>
+            <li>Documentación técnica de especificaciones y procesos para escalar de laboratorio a producción.</li>
           </ul></div></div>
         </article>
         <article class="job">
@@ -1181,7 +1195,7 @@
       </div>
       <footer>
         <span>© 2026 Adrian Copa · Transformador de Operaciones Industriales</span>
-        <span class="visits" id="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b id="visitsCount">2.482</b> visitas</span>
+        <span class="visits" id="visits" title="Visitas a esta página, contadas automáticamente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><b class="visits-num">2.482</b> visitas</span>
         <span>Santa Cruz, Bolivia</span>
       </footer>
     </div>
@@ -1198,15 +1212,19 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  /* ---------- automatic visit counter (shared across index.html + blog.html) ---------- */
+  /* ---------- automatic visit counter (top nav + footer, shared across index.html + blog.html) ---------- */
   (function () {
-    const el = document.getElementById('visitsCount');
-    if (!el) return;
+    const els = document.querySelectorAll('.visits-num');
+    if (!els.length) return;
     const already = sessionStorage.getItem('adriancopa_visited');
     const ep = already ? 'get' : 'hit';
     fetch(`https://abacus.jasoncameron.dev/${ep}/adriancopa-portfolio/visitas`)
       .then((r) => r.json())
-      .then((d) => { el.textContent = Number(d.value).toLocaleString('es-BO'); sessionStorage.setItem('adriancopa_visited', '1'); })
+      .then((d) => {
+        const text = Number(d.value).toLocaleString('es-BO');
+        els.forEach((el) => { el.textContent = text; });
+        sessionStorage.setItem('adriancopa_visited', '1');
+      })
       .catch(() => {}); // leave the static fallback number already in the markup
   })();
 
