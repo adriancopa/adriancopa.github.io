@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adrian Copa · Transformador de Operaciones Industriales</title>
-  <meta name="description" content="Transformador de Operaciones Industriales en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles: 3,5x facturación, Bs 190K de caja liberada, -90% en fallas de calidad." />
+  <title>Adrian Copa | Gerente de Operaciones · Transformador de Operaciones Industriales</title>
+  <meta name="description" content="Adrian Copa, Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles: 3,5x facturación, Bs 190K de caja liberada, -90% en fallas de calidad." />
   <link rel="canonical" href="https://adriancopa.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Adrian Copa" />
   <meta property="og:url" content="https://adriancopa.github.io/" />
-  <meta property="og:title" content="Adrian Copa · Transformo procesos ineficientes en resultados medibles" />
-  <meta property="og:description" content="Transformador de Operaciones Industriales en consumo masivo. 3,5x facturación · Bs 190K de caja liberada · -90% fallas de calidad. Casos de éxito, libros y blog." />
+  <meta property="og:title" content="Adrian Copa | Gerente de Operaciones · Transformo procesos ineficientes en resultados medibles" />
+  <meta property="og:description" content="Gerente de Operaciones en consumo masivo. 3,5x facturación · Bs 190K de caja liberada · -90% fallas de calidad. Casos de éxito, libros y blog." />
   <meta property="og:image" content="https://adriancopa.github.io/assets/foto-perfil.jpg" />
   <meta property="og:image:width" content="640" />
   <meta property="og:image:height" content="640" />
   <meta property="og:locale" content="es_BO" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Adrian Copa Jara", "alternateName": "Adrian Copa", "jobTitle": "Transformador de Operaciones Industriales", "description": "Transformador de Operaciones Industriales en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles.", "url": "https://adriancopa.github.io/", "image": "https://adriancopa.github.io/assets/foto-perfil.jpg", "email": "mailto:adriancopa365@gmail.com", "telephone": "+59175971526", "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressRegion": "Santa Cruz", "addressCountry": "BO"}, "worksFor": {"@type": "Organization", "name": "Novaquimica SRL"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Mayor de San Simón"}, "knowsAbout": ["Gestión de operaciones", "Planificación de la producción", "S&OP", "MRP", "Lean Six Sigma", "Mejora continua", "ISO 9001", "Gestión de inventarios", "Control de costos", "Consumo masivo", "Home & Personal Care"], "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-copa-jara", "https://www.tiktok.com/@modo_fabrica"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Adrian Copa Jara", "alternateName": "Adrian Copa", "jobTitle": "Gerente de Operaciones", "description": "Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles.", "additionalName": "Transformador de Operaciones Industriales", "url": "https://adriancopa.github.io/", "image": "https://adriancopa.github.io/assets/foto-perfil.jpg", "email": "mailto:adriancopa365@gmail.com", "telephone": "+59175971526", "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressRegion": "Santa Cruz", "addressCountry": "BO"}, "worksFor": {"@type": "Organization", "name": "Novaquimica SRL"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Mayor de San Simón"}, "knowsAbout": ["Gestión de operaciones", "Planificación de la producción", "S&OP", "MRP", "Lean Six Sigma", "Mejora continua", "ISO 9001", "Gestión de inventarios", "Control de costos", "Consumo masivo", "Home & Personal Care"], "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-copa-jara", "https://www.tiktok.com/@modo_fabrica"]}</script>
   <link rel="icon" href="assets/foto-perfil.jpg" />
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -340,6 +340,8 @@
     .book .back { position: absolute; inset: 0; background: var(--spine); transform: translateZ(-13px); border-radius: 2px 5px 5px 2px; }
     .book-shadow { width: 80%; height: 16px; background: radial-gradient(ellipse, rgba(0,0,0,.5), transparent 70%); margin-top: -4px; }
     .book-info { text-align: center; margin-top: 20px; }
+    .ai-note { margin-top: -8px; margin-bottom: 30px; font-size: 14.5px; color: #aab4c4; }
+    .ai-note b { color: #fff; font-weight: 700; }
     .book-info .plat { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; color: var(--accent); text-transform: uppercase; }
     .book-info h3 { font-size: 18px; font-weight: 800; margin: 6px 0 6px; color: #fff; }
     .book-info p { font-size: 13.5px; color: #aab4c4; }
@@ -498,10 +500,12 @@
       .wrap { padding: 0 16px; }
       .reel { padding: 6px 16px 26px; margin: 0 -16px; }
       .hero-copy { display: flex; flex-direction: column; }
-      .hero-copy .kpis, .hero-copy .more-proof, .hero-copy .li-proof { order: 1; }
+      /* CTA first: a mobile visitor should see the "hablemos" button without scrolling,
+         the stat cards reinforce the pitch right after it, not before it. */
+      .hero-copy .cta { order: 1; }
+      .hero-copy .kpis, .hero-copy .more-proof, .hero-copy .li-proof { order: 2; }
       .hero-copy .kpis { margin-top: 18px; }
       .hero-copy .more-proof { margin-top: 10px; }
-      .hero-copy .cta { order: 2; margin-top: 16px; }
       .hero-copy .role-pill { align-self: flex-start; font-size: 12.5px; white-space: normal; }
       .visual { margin-top: 0; }
       .hello { font-size: 16px; }
@@ -662,7 +666,7 @@
   <div class="trust">
     <div class="wrap trust-in">
       <p>Experiencia en</p>
-      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span><span>kocha Group</span></div>
+      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span></div>
     </div>
   </div>
 
@@ -1071,6 +1075,7 @@
         <div><span class="eyebrow">Autor</span><h2>4 libros para quienes <span class="hl">lideran y producen.</span></h2></div>
         <p>Lo que aprendí en planta, convertido en guías prácticas. Pasa el cursor o toca un libro.</p>
       </div>
+      <p class="ai-note reveal">También escribí una guía sobre <b>IA (Claude) aplicada a pymes</b>: cómo la uso a diario para automatizar reportes y decidir con datos.</p>
       <div class="shelf">
         <div class="book-wrap reveal">
           <div class="book" tabindex="0" style="--spine:#20124d"><img class="cover" src="assets/libro-12-pasos.jpg" alt="Portada: 12 pasos para tener éxito en tu 1er trabajo" width="266" height="425" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
@@ -1160,7 +1165,6 @@
         <div class="area reveal"><b>2</b><h4>Finanzas y cambio</h4><p>Finanzas para no financieros y gestión del cambio.</p></div>
       </div>
       <div class="certs reveal">
-        <span><b>IA (Claude) aplicada a pymes</b> · Anthropic</span>
         <span><b>Lean y Six Sigma</b> · LinkedIn Learning</span>
         <span><b>ISO 9001:2015</b> · Ibnorca</span>
         <span><b>ISO 22000</b> · Inocuidad alimentaria</span>
