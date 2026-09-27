@@ -16,6 +16,7 @@
   <meta property="og:image:height" content="640" />
   <meta property="og:locale" content="es_BO" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Adrian Copa Jara", "alternateName": "Adrian Copa", "jobTitle": "Gerente de Operaciones", "description": "Gerente de Operaciones en consumo masivo (Home & Personal Care). Transformo procesos ineficientes en resultados medibles.", "url": "https://adriancopa1705-commits.github.io/", "image": "https://adriancopa1705-commits.github.io/assets/foto-perfil.jpg", "email": "mailto:adriancopa365@gmail.com", "telephone": "+59175971526", "address": {"@type": "PostalAddress", "addressLocality": "Santa Cruz de la Sierra", "addressRegion": "Santa Cruz", "addressCountry": "BO"}, "worksFor": {"@type": "Organization", "name": "Novaquimica SRL"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Mayor de San Simón"}, "knowsAbout": ["Gestión de operaciones", "Planificación de la producción", "S&OP", "MRP", "Lean Six Sigma", "Mejora continua", "ISO 9001", "Gestión de inventarios", "Control de costos", "Consumo masivo", "Home & Personal Care"], "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-copa-jara", "https://www.tiktok.com/@modo_fabrica"]}</script>
   <link rel="icon" href="assets/foto-perfil.jpg" />
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -110,6 +111,7 @@
     /* ---------- hero ---------- */
     .hero { padding: 56px 0 40px; }
     .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+    .hero-grid > * { min-width: 0; }
     .hello { display: flex; align-items: center; gap: 12px; font-family: var(--head); font-weight: 700; font-size: 18px; color: var(--ink-2); }
     .hello img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; display: none; border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent); }
     .hello .hi { font-weight: 500; color: var(--muted); }
@@ -135,6 +137,16 @@
     .tick { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
     .tick.run { animation: tick 3.6s linear forwards; }
     @keyframes tick { to { transform: scaleX(1); } }
+    .creds { display: none; }
+    .cred { flex: none; display: flex; align-items: center; gap: 9px; padding: 9px 12px 9px 9px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); scroll-snap-align: start; }
+    .cred .ic { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: var(--c-bg); color: var(--c); flex: none; }
+    .cred .ic svg { width: 17px; height: 17px; }
+    .cred b { display: block; font-family: var(--head); font-weight: 800; font-size: 13px; line-height: 1.2; white-space: nowrap; }
+    .cred small { display: block; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+    .li-proof { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--ink-2); }
+    .li-proof svg { width: 18px; height: 18px; color: #0a66c2; flex: none; }
+    .li-proof b { font-family: var(--head); font-weight: 800; color: var(--ink); }
+    .li-proof:hover span { text-decoration: underline; text-underline-offset: 3px; }
     .more-proof { display: inline-flex; gap: 6px; margin-top: 14px; font-family: var(--head); font-weight: 700; font-size: 14.5px; color: var(--accent); }
     .more-proof span { transition: transform .2s; }
     .more-proof:hover span { transform: translateX(4px); }
@@ -289,6 +301,9 @@
     .job:hover { background: #fbfaf8; }
     .job .when { font-size: 13px; font-weight: 600; color: var(--muted); padding-top: 5px; }
     .job h3 { font-size: 21px; font-weight: 800; }
+    .job-btn { font: inherit; color: inherit; text-align: left; padding: 0; cursor: pointer; letter-spacing: inherit; }
+    .job-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .job:has(.job-btn:focus-visible) { background: #fbfaf8; }
     .job .org { color: var(--muted); font-size: 15px; margin-top: 2px; }
     .job .org b { color: var(--ink); font-weight: 600; }
     .job .hit { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; }
@@ -438,6 +453,8 @@
       .hero-grid, .sec-head, .contact-card { grid-template-columns: 1fr; }
       .visual { display: none; }
       .hello img { display: block; }
+      .creds { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 14px -16px 0; padding: 4px 16px 8px; }
+      .creds::-webkit-scrollbar { display: none; }
       .sec-head { gap: 14px; margin-bottom: 32px; }
       .sec-head p { justify-self: start; }
       .explore { grid-template-columns: 1fr 1fr; margin-top: 30px; }
@@ -460,7 +477,7 @@
       .wrap { padding: 0 16px; }
       .reel { padding: 6px 16px 26px; margin: 0 -16px; }
       .hero-copy { display: flex; flex-direction: column; }
-      .hero-copy .kpis, .hero-copy .more-proof { order: 1; }
+      .hero-copy .kpis, .hero-copy .more-proof, .hero-copy .li-proof { order: 1; }
       .hero-copy .kpis { margin-top: 18px; }
       .hero-copy .more-proof { margin-top: 10px; }
       .hero-copy .cta { order: 2; margin-top: 16px; }
@@ -505,7 +522,7 @@
       .job .detail { grid-column: 1 / -1; }
       .shelf { gap: 36px 14px; }
       .book-info h3 { font-size: 15.5px; }
-      .book-info p { display: none; }
+      .book-info p { font-size: 12.5px; }
       .sec-cta { padding: 20px; }
       .sec-cta .btn { width: 100%; }
     }
@@ -556,6 +573,7 @@
         <div class="hero-copy">
           <p class="hello reveal"><img src="assets/foto-perfil.jpg" alt="Adrian Copa" width="52" height="52" /><span><span class="hi">Hola, soy</span> Adrian Copa</span></p>
           <span class="role-pill reveal"><span class="live"></span>Gerente de Operaciones · Consumo masivo (Home &amp; Personal Care)</span>
+          <div class="creds" id="creds" role="list" aria-label="Cargos y credenciales"></div>
           <h1 class="reveal">Transformo procesos ineficientes en <span class="hl">resultados medibles.</span></h1>
           <p class="lead reveal">Más de 10 años en <b>Unilever, Astrix y Novaquimica</b> haciendo que las fábricas <b>vendan más, gasten menos</b> y no dependan de una sola persona.</p>
           <div class="cta reveal">
@@ -571,8 +589,8 @@
           <div class="kpis reveal" id="kpis">
             <div class="kpi">
               <div class="face on"><b>3,5<em>x</em></b><span>facturación en menos de 2 años</span><i>Novaquimica</i></div>
-              <div class="face"><b>+157<em>%</em></b><span>ventas mensuales en una pyme</span><i>kocha Group</i></div>
-              <div class="face"><b>-20<em>%</em></b><span>tiempos de entrega al cliente</span><i>kocha Group</i></div>
+              <div class="face"><b>-30<em>%</em></b><span>mermas de planta sin maquinaria nueva</span><i>Novaquimica</i></div>
+              <div class="face"><b>+20<em>%</em></b><span>eficiencia de procesos auditados</span><i>Astrix</i></div>
               <div class="tick"></div>
             </div>
             <div class="kpi">
@@ -589,6 +607,7 @@
             </div>
           </div>
           <a class="more-proof reveal" href="#numeros">Ver los +15 logros medibles <span>→</span></a>
+          <a class="li-proof reveal" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span><b>1.773</b> seguidores · <b class="li-posts">148</b> publicaciones en LinkedIn</span></a>
         </div>
 
         <div class="visual reveal" id="visual">
@@ -619,7 +638,7 @@
   <div class="trust">
     <div class="wrap trust-in">
       <p>Experiencia en</p>
-      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span><span>kocha Group</span></div>
+      <div class="logos"><span>Unilever</span><span>Novaquimica</span><span>Astrix</span><span>Fabrione</span></div>
     </div>
   </div>
 
@@ -654,7 +673,7 @@
             <p>Reestructuro planta, planificación y compras para que la operación acompañe al crecimiento.</p>
             <ul class="proofs">
               <li><b>3,5x</b><span>facturación: de Bs 200K a Bs 700K/mes</span><i>Novaquimica</i></li>
-              <li><b>+157%</b><span>ventas mensuales en una pyme</span><i>kocha Group</i></li>
+              <li><b>Tier 3 → 2</b><span>posicionamiento de marca con márgenes actualizados</span><i>Novaquimica</i></li>
               <li><b>B2B</b><span>ventas mayoristas y cuentas clave</span><i>Fabrione</i></li>
             </ul>
             <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Crecer%20en%20ventas%20sin%20perder%20el%20control." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
@@ -802,7 +821,7 @@
             <ul class="proofs">
               <li><b>1.º</b><span>equipo de mejora continua de la empresa</span><i>Novaquimica</i></li>
               <li><b>Nacional</b><span>equipo de calidad de correctivo a preventivo</span><i>Unilever</i></li>
-              <li><b>15%</b><span>de ahorro operativo con gestión integral</span><i>kocha Group</i></li>
+              <li><b>+20%</b><span>eficiencia con equipos y procesos estandarizados</span><i>Astrix</i></li>
             </ul>
             <a class="svc-cta" href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20quiero%20conversar%20sobre%3A%20Equipos%20que%20funcionan%20sin%20supervisi%C3%B3n." target="_blank" rel="noopener">Lo quiero en mi empresa <span>→</span></a>
           </div>
@@ -819,9 +838,9 @@
   <div class="band" id="numeros">
     <div class="wrap">
       <span class="eyebrow">En números</span>
-      <h2 class="reveal">+15 resultados medibles en 5 empresas.</h2>
+      <h2 class="reveal">+15 resultados medibles en Unilever, Novaquimica y Astrix.</h2>
       <div class="filter reveal" id="numFilter">
-        <button class="on" data-f="all">Todas</button><button data-f="nova">Novaquimica</button><button data-f="uni">Unilever</button><button data-f="astrix">Astrix</button><button data-f="kocha">kocha Group</button>
+        <button class="on" data-f="all">Todas</button><button data-f="nova">Novaquimica</button><button data-f="uni">Unilever</button><button data-f="astrix">Astrix</button>
       </div>
       <div class="nums reveal" id="nums">
         <div class="n" data-c="nova"><b>+<span data-count="250">250</span><em>%</em></b><p><strong>Facturación mensual</strong>: de Bs 200K a Bs 700K.</p><i>Novaquimica</i></div>
@@ -829,16 +848,17 @@
         <div class="n" data-c="nova"><b>-<span data-count="30">30</span><em>%</em></b><p><strong>Mermas de planta</strong>, sin invertir en maquinaria.</p><i>Novaquimica</i></div>
         <div class="n" data-c="nova"><b>+<span data-count="20">20</span><em>%</em></b><p><strong>Rendimiento de línea</strong> con procesos rediseñados.</p><i>Novaquimica</i></div>
         <div class="n" data-c="nova"><b>4h<em>→</em>1h</b><p><strong>Carga de camiones</strong> con un almacén autónomo.</p><i>Novaquimica</i></div>
+        <div class="n" data-c="nova"><b>1<em> h</em></b><p><strong>Dashboard gerencial</strong> actualizado cada hora desde el ERP.</p><i>Novaquimica</i></div>
         <div class="n" data-c="nova"><b>Tier 3<em>→</em>2</b><p><strong>Posicionamiento de marca</strong> y márgenes actualizados.</p><i>Novaquimica</i></div>
         <div class="n" data-c="uni"><b>-<span data-count="90">90</span><em>%</em></b><p><strong>No conformidades</strong>: de 250 al año a 1–2 al mes.</p><i>Unilever</i></div>
         <div class="n" data-c="uni"><b><span data-count="100">100</span><em>%</em></b><p><strong>Auditorías aprobadas</strong>, internas y externas.</p><i>Unilever</i></div>
         <div class="n" data-c="uni"><b>-<span data-count="15">15</span><em>%</em></b><p><strong>Tiempo de lanzamiento</strong> de nuevos productos.</p><i>Unilever</i></div>
-        <div class="n" data-c="kocha"><b>+<span data-count="157">157</span><em>%</em></b><p><strong>Ventas mensuales</strong>: de Bs 70K a Bs 180K.</p><i>kocha Group</i></div>
-        <div class="n" data-c="kocha"><b>-<span data-count="20">20</span><em>%</em></b><p><strong>Tiempos de entrega</strong> y 15% de ahorro operativo.</p><i>kocha Group</i></div>
+
         <div class="n" data-c="astrix"><b>USD <span data-count="35">35</span><em>K</em></b><p><strong>Ahorro anual</strong> en desperdicios, aguas, reproceso y envasado.</p><i>Astrix</i></div>
         <div class="n" data-c="astrix"><b><span data-count="99">99</span><em>%</em></b><p><strong>Exactitud de inventarios</strong> con SAP One.</p><i>Astrix</i></div>
         <div class="n" data-c="astrix"><b>+<span data-count="20">20</span><em>%</em></b><p><strong>Eficiencia de procesos</strong>, con defectos -15%.</p><i>Astrix</i></div>
-        <div class="n" data-c="astrix"><b>-<span data-count="10">10</span><em>%</em></b><p><strong>Costo de materiales</strong> y envasado PET-PEAD +15%.</p><i>Astrix</i></div>
+        <div class="n" data-c="astrix"><b>-<span data-count="10">10</span><em>%</em></b><p><strong>Costo de materiales</strong> con evaluación de proveedores.</p><i>Astrix</i></div>
+        <div class="n" data-c="astrix"><b>+<span data-count="15">15</span><em>%</em></b><p><strong>Eficiencia en envasado</strong> y soplado PET-PEAD.</p><i>Astrix</i></div>
         <div class="n n-cta"><b>¿El próximo?</b><p>Tu empresa puede ser el siguiente caso de éxito.</p><a class="btn btn-primary" href="#contacto">Hablemos <span class="arr">→</span></a></div>
       </div>
     </div>
@@ -871,9 +891,9 @@
           </div>
         </article>
         <article class="case reveal">
-          <div class="case-fig"><small>kocha Group</small><b>+157%</b><span>ventas mensuales</span></div>
-          <div class="case-body"><h3>Gestión integral de una pyme</h3>
-            <div class="steps3"><div><h4>Antes</h4><p>Ventas de Bs 70K al mes y entregas lentas.</p></div><div><h4>Qué hice</h4><p>Ordené ventas, producción y finanzas bajo una sola gestión.</p></div><div><h4>Después</h4><p><b>Bs 180K al mes</b>, entregas 20% más rápidas y 15% de ahorro operativo.</p></div></div>
+          <div class="case-fig"><small>Astrix S.A.</small><b>USD 20K</b><span>de ahorro al año</span></div>
+          <div class="case-body"><h3>Elaboración: de ineficiente a alta eficiencia</h3>
+            <div class="steps3"><div><h4>Antes</h4><p>Área de elaboración con desperdicios, reprocesos y sin datos confiables.</p></div><div><h4>Qué hice</h4><p>Generé datos de proceso, estandaricé la elaboración y controlé inventarios con SAP One.</p></div><div><h4>Después</h4><p><b>~USD 20.000 de ahorro al año</b> y 99% de exactitud de inventarios.</p></div></div>
           </div>
         </article>
       </div>
@@ -944,9 +964,9 @@
       <div class="timeline reveal">
         <article class="job open">
           <div class="when">Ene 2024 — Hoy</div>
-          <div><h3>Gerente de Operaciones</h3><p class="org"><b>Novaquimica SRL</b> · Santa Cruz, Bolivia</p><span class="hit">3,5x facturación</span></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d1">Gerente de Operaciones</button></h3><p class="org"><b>Novaquimica SRL</b> · Santa Cruz, Bolivia</p><span class="hit">3,5x facturación</span></div>
           <div class="plus">+</div>
-          <div class="detail"><div><ul>
+          <div class="detail" id="job-d1" role="region"><div><ul>
             <li>Reestructuración integral: facturación mensual de <b>Bs 200.000 a Bs 700.000</b> (+250%).</li>
             <li>Mermas <b>-30%</b> y rendimiento de línea <b>+20%</b> sin invertir en maquinaria nueva.</li>
             <li><b>Bs 190.000 liberados</b> de inventario; carga de camiones de 4 h a 1 h con almacén autónomo.</li>
@@ -957,36 +977,39 @@
         </article>
         <article class="job">
           <div class="when">2024 — Hoy</div>
-          <div><h3>Consultor Independiente</h3><p class="org"><b>Pymes</b> · Operaciones, calidad y mejora continua</p></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d2">Consultor Independiente</button></h3><p class="org"><b>Pymes</b> · Operaciones, calidad y mejora continua</p></div>
           <div class="plus">+</div>
-          <div class="detail"><div><ul><li>Asesoro a pequeñas y medianas empresas que buscan ordenar su operación y reducir costos.</li></ul></div></div>
+          <div class="detail" id="job-d2" role="region"><div><ul><li>Asesoro a pequeñas y medianas empresas que buscan ordenar su operación y reducir costos.</li></ul></div></div>
         </article>
         <article class="job">
           <div class="when">Jun 2023 — Ene 2024</div>
-          <div><h3>Gerente Comercial</h3><p class="org"><b>Fabrione</b></p></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d3">Gerente Comercial</button></h3><p class="org"><b>Fabrione</b></p></div>
           <div class="plus">+</div>
-          <div class="detail"><div><ul><li>Planes comerciales y campañas de marketing; ventas mayoristas B2B y gestión de cuentas clave.</li></ul></div></div>
+          <div class="detail" id="job-d3" role="region"><div><ul><li>Planes comerciales y campañas de marketing; ventas mayoristas B2B y gestión de cuentas clave.</li></ul></div></div>
         </article>
         <article class="job">
-          <div class="when">Feb 2023 — Jun 2023</div>
-          <div><h3>Gerente Regional</h3><p class="org"><b>kocha Group</b> · Cochabamba</p><span class="hit">+157% ventas</span></div>
+          <div class="when">Oct 2021 — May 2023</div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d4">Especialización profesional</button></h3><p class="org"><b>Formación autodirigida</b> · Operaciones, proyectos y negocio</p><span class="hit">+50 certificaciones</span></div>
           <div class="plus">+</div>
-          <div class="detail"><div><ul><li>Gestión integral de una pyme: ventas de <b>Bs 70.000 a Bs 180.000</b> al mes, entregas -20% y 15% de ahorro operativo.</li></ul></div></div>
+          <div class="detail" id="job-d4" role="region"><div><ul>
+            <li><b>+50 cursos y certificaciones</b> en LinkedIn Learning: Lean Six Sigma (Green/Black Belt), gestión de proyectos, cadena de suministro, ventas, marketing y finanzas.</li>
+            <li>Base para pasar de la calidad a la gestión integral de una operación: comercial, finanzas y equipo.</li>
+          </ul></div></div>
         </article>
         <article class="job">
           <div class="when">Ene 2020 — Sept 2021</div>
-          <div><h3>Jefe de Aseguramiento de la Calidad</h3><p class="org"><b>Unilever</b> · Bolivia</p><span class="hit">-90% no conformidades</span></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d5">Jefe de Aseguramiento de la Calidad</button></h3><p class="org"><b>Unilever</b> · Bolivia</p><span class="hit">-90% no conformidades</span></div>
           <div class="plus">+</div>
-          <div class="detail"><div><ul>
+          <div class="detail" id="job-d5" role="region"><div><ul>
             <li>Calidad de correctiva a preventiva a nivel nacional: de <b>250 casos/año a 1–2 por mes</b>.</li>
             <li>100% de cumplimiento en auditorías internas y externas; lanzamientos 15% más rápidos.</li>
           </ul></div></div>
         </article>
         <article class="job">
           <div class="when">Ene 2015 — Dic 2019</div>
-          <div><h3>Calidad, Elaboración y Procesos</h3><p class="org"><b>Astrix S.A.</b> · Home Care y Personal Care</p><span class="hit">USD 35K/año de ahorro</span></div>
+          <div><h3><button class="job-btn" type="button" aria-expanded="false" aria-controls="job-d6">Calidad, Elaboración y Procesos</button></h3><p class="org"><b>Astrix S.A.</b> · Home Care y Personal Care</p><span class="hit">USD 35K/año de ahorro</span></div>
           <div class="plus">+</div>
-          <div class="detail"><div>
+          <div class="detail" id="job-d6" role="region"><div>
             <p class="job-sub">Jefe de Aseguramiento de la Calidad · Supervisor de Elaboración · Asistente de Procesos</p>
             <ul>
               <li>Eficiencia de procesos +20%, defectos -15% y costos de materiales -10%.</li>
@@ -1042,7 +1065,7 @@
       <div class="posts" id="posts"></div>
       <div class="li-cta reveal">
         <div class="li-who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Gerente de Operaciones · Consumo masivo</span></div></div>
-        <p>Sígueme en LinkedIn para recibir cada publicación primero.</p>
+        <p>Únete a los <b>1.773</b> profesionales que siguen mis <b class="li-posts">148</b> publicaciones en LinkedIn.</p>
         <div class="li-actions">
           <a class="btn btn-li btn-lg" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Seguir en LinkedIn</a>
           <a class="btn btn-ghost btn-lg" href="blog.html">Ver todo el blog <span class="arr">→</span></a>
@@ -1124,7 +1147,7 @@
       </div>
       <div class="channels">
         <a href="mailto:adriancopa365@gmail.com"><small>EMAIL</small>adriancopa365@gmail.com</a>
-        <a href="https://wa.me/59175971526" target="_blank" rel="noopener"><small>WHATSAPP</small>+591 759 71526</a>
+        <a href="https://wa.me/59175971526" target="_blank" rel="noopener"><small>WHATSAPP</small>+591 7597 1526</a>
         <a href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><small>LINKEDIN</small>/in/adrian-copa-jara</a>
         <a href="https://www.tiktok.com/@modo_fabrica" target="_blank" rel="noopener"><small>TIKTOK</small>@modo_fabrica</a>
       </div>
@@ -1244,7 +1267,13 @@
   onScroll();
 
   /* ---------- timeline accordion ---------- */
-  document.querySelectorAll('.job').forEach((job) => job.addEventListener('click', () => job.classList.toggle('open')));
+  document.querySelectorAll('.job').forEach((job) => {
+    const btn = job.querySelector('.job-btn');
+    const sync = () => btn && btn.setAttribute('aria-expanded', String(job.classList.contains('open')));
+    sync();
+    // Clicking anywhere on the row toggles; the inner <button> gives keyboard + screen-reader access.
+    job.addEventListener('click', (e) => { if (e.target.closest('a')) return; job.classList.toggle('open'); sync(); });
+  });
 
   /* ---------- books: tap to bring forward ---------- */
   document.querySelectorAll('.book-wrap').forEach((b) => b.querySelector('.book').addEventListener('click', () => {
@@ -1265,6 +1294,8 @@
   fetch('data/posts.json', { cache: 'no-cache' }).then((r) => r.json()).then((posts) => {
     posts.sort((a, b) => b.fecha.localeCompare(a.fecha));
     const seg = (p) => (p.etiquetas || [])[0] || 'Pymes y emprendimiento';
+    const nLi = posts.filter((p) => p.fuente === 'linkedin').length;
+    document.querySelectorAll('.li-posts').forEach((el) => { el.textContent = nLi.toLocaleString('es-BO'); });
     document.getElementById('posts').innerHTML = posts.slice(0, 3).map((p) => {
       const img = p.imagen || (p.tiktok ? `assets/tiktok/${p.tiktok}.jpg` : '');
       const [c1, c2] = SEG[seg(p)] || SEG['Pymes y emprendimiento'];
@@ -1302,7 +1333,7 @@
   const COL = { o: ['#e0622f', '#fbe9e0'], b: ['#1f63c6', '#e3edfb'], g: ['#1f9d57', '#e1f4e8'], p: ['#7a3fc9', '#efe6fa'] };
   const SLOTS = [
     [['factory', 'Gerente de Operaciones', 'Novaquimica SRL', 'o'], ['shield', 'Jefe de Aseguramiento de Calidad', 'Unilever Bolivia', 'b'], ['flask', 'Jefe de Calidad y Elaboración', 'Astrix S.A.', 'g']],
-    [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['pin', 'Gerente Regional', 'kocha Group · Cochabamba', 'o'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
+    [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['lean', '+50 certificaciones', 'Operaciones · Proyectos · Finanzas', 'o'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
     [['book', 'Autor de 4 libros', 'Amazon · Hotmart', 'p'], ['lean', 'Lean · Six Sigma', 'S&OP · MRP · ISO 9001', 'g'], ['chip', 'Operaciones + IA', 'Dashboards automáticos', 'b'], ['play', 'Creador de Modo Fábrica', 'Consejos para pymes en TikTok', 'o']],
   ];
   const renderBadge = (el, item, n, i) => {
@@ -1310,6 +1341,9 @@
     el.style.setProperty('--c', COL[c][0]); el.style.setProperty('--c-bg', COL[c][1]);
     el.innerHTML = `<div class="in-b"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[ic]}</svg></span><div><b>${t}</b><small>${s}</small></div></div><span class="dots">${Array.from({ length: n }, (_, k) => `<i class="${k === i ? 'on' : ''}"></i>`).join('')}</span>`;
   };
+  // Mobile: the portrait is hidden, so the same roles show as a swipeable strip.
+  document.getElementById('creds').innerHTML = SLOTS.flat().map(([ic, t, st, c]) =>
+    `<div class="cred" role="listitem" style="--c:${COL[c][0]};--c-bg:${COL[c][1]}"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[ic]}</svg></span><div><b>${t}</b><small>${st}</small></div></div>`).join('');
   document.querySelectorAll('.badge[data-slot]').forEach((el) => {
     const list = SLOTS[+el.dataset.slot]; let i = 0;
     renderBadge(el, list[0], list.length, 0);
