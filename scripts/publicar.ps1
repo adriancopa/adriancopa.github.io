@@ -7,6 +7,11 @@ $repo = "adriancopa/adriancopa.github.io"
 $root = Split-Path -Parent $PSScriptRoot
 $excluir = '^(\.git|\.vite|node_modules|__pycache__)(/|$)|^data/(linkedin_raw|linkedin_nuevos)\.json$|\.pyc$'
 
+# Regenera la version para clientes (sin mencionar el empleo actual) antes de publicar
+$env:PYTHONUTF8 = 1
+$py = (Get-Command python -ErrorAction SilentlyContinue).Source; if (-not $py) { $py = (Get-Command py).Source }
+& $py (Join-Path $PSScriptRoot "generar_clientes.py"); if ($LASTEXITCODE -ne 0) { throw "generar_clientes.py fallo: no se publica nada" }
+
 # Arbol remoto: ruta -> sha del blob
 $arbol = gh api "repos/$repo/git/trees/main?recursive=1" | ConvertFrom-Json
 $remoto = @{}
