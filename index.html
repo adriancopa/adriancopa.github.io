@@ -330,7 +330,7 @@
     #libros { background: var(--navy); color: #fff; overflow: hidden; }
     #libros::before { content: ''; position: absolute; inset: 0; background: radial-gradient(800px 360px at 50% 100%, rgba(224,98,47,.22), transparent 70%); pointer-events: none; }
     #libros .sec-head p { color: #aab4c4; }
-    .shelf { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; perspective: 1800px; }
+    .shelf { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; perspective: 1800px; }
     .book-wrap { display: flex; flex-direction: column; align-items: center; }
     .book { position: relative; width: min(190px, 88%); transform-style: preserve-3d; transform: rotateY(24deg) rotateX(3deg); transition: transform .8s var(--ease); cursor: pointer; }
     .book-wrap:hover .book, .book:focus, .book-wrap.front .book { transform: rotateY(-5deg) translateZ(40px) translateY(-8px); }
@@ -633,7 +633,7 @@
             </div>
           </div>
           <a class="more-proof reveal" href="#numeros">Ver los +15 logros medibles <span>→</span></a>
-          <a class="li-proof reveal" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span><b>1.773</b> seguidores · <b class="li-posts">148</b> publicaciones en LinkedIn</span></a>
+          <a class="li-proof reveal" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span><b>1.773</b> seguidores · <b class="li-posts">167</b> publicaciones en LinkedIn</span></a>
         </div>
 
         <div class="visual reveal" id="visual">
@@ -1070,10 +1070,15 @@
   <section id="libros">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="eyebrow">Autor</span><h2>4 libros para quienes <span class="hl">lideran y producen.</span></h2></div>
+        <div><span class="eyebrow">Autor</span><h2>5 libros para quienes <span class="hl">lideran y producen.</span></h2></div>
         <p>Lo que aprendí en planta, convertido en guías prácticas. Pasa el cursor o toca un libro.</p>
       </div>
       <div class="shelf">
+        <div class="book-wrap reveal">
+          <div class="book" tabindex="0" style="--spine:#7ac70c"><img class="cover" src="assets/libro-supervisor-produccion.png" alt="Portada: Supervisor de Producción: Datos, Lean e IA" width="443" height="609" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
+          <div class="book-shadow"></div>
+          <div class="book-info"><span class="plat">Nuevo · Guía de 5 días</span><h3>Supervisor de Producción: Datos · Lean · IA</h3><p>27 capítulos para liderar planta con datos, Lean e inteligencia artificial.</p><a href="https://wa.me/59175971526?text=Hola%20Adrian%2C%20me%20interesa%20tu%20libro%20%22Supervisor%20de%20Producci%C3%B3n%3A%20Datos%2C%20Lean%20e%20IA%22" target="_blank" rel="noopener">Lo quiero →</a></div>
+        </div>
         <div class="book-wrap reveal">
           <div class="book" tabindex="0" style="--spine:#20124d"><img class="cover" src="assets/libro-12-pasos.jpg" alt="Portada: 12 pasos para tener éxito en tu 1er trabajo" width="266" height="425" /><div class="spine"></div><div class="pages"></div><div class="back"></div></div>
           <div class="book-shadow"></div>
@@ -1109,7 +1114,7 @@
       <div class="posts" id="posts"></div>
       <div class="li-cta reveal">
         <div class="li-who"><img src="assets/foto-perfil.jpg" alt="" width="56" height="56" /><div><b>Adrian Copa</b><span>Transformador de Operaciones Industriales · Consumo masivo</span></div></div>
-        <p>Únete a los <b>1.773</b> profesionales que siguen mis <b class="li-posts">148</b> publicaciones en LinkedIn.</p>
+        <p>Únete a los <b>1.773</b> profesionales que siguen mis <b class="li-posts">167</b> publicaciones en LinkedIn.</p>
         <div class="li-actions">
           <a class="btn btn-li btn-lg" href="https://www.linkedin.com/in/adrian-copa-jara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Seguir en LinkedIn</a>
           <a class="btn btn-ghost btn-lg" href="blog.html">Ver todo el blog <span class="arr">→</span></a>
@@ -1398,7 +1403,7 @@
   const SLOTS = [
     [['factory', 'Gerente de Operaciones', 'Novaquimica SRL', 'o'], ['shield', 'Jefe de Aseguramiento de Calidad', 'Unilever Bolivia', 'b'], ['flask', 'Jefe de Calidad y Elaboración', 'Astrix S.A.', 'g']],
     [['deal', 'Gerente Comercial', 'Fabrione · Ventas B2B', 'p'], ['pin', 'Gerente Regional', 'kocha Group · Cochabamba', 'o'], ['lean', '+50 certificaciones', 'Operaciones · Proyectos · Finanzas', 'g'], ['brief', 'Consultor de Pymes', 'Operaciones y calidad', 'b']],
-    [['book', 'Autor de 4 libros', 'Amazon · Hotmart', 'p'], ['lean', 'Lean · Six Sigma', 'S&OP · MRP · ISO 9001', 'g'], ['chip', 'Operaciones + IA', 'Dashboards automáticos', 'b'], ['play', 'Creador de Modo Fábrica', 'Consejos para pymes en TikTok', 'o']],
+    [['book', 'Autor de 5 libros', 'Amazon · Hotmart', 'p'], ['lean', 'Lean · Six Sigma', 'S&OP · MRP · ISO 9001', 'g'], ['chip', 'Operaciones + IA', 'Dashboards automáticos', 'b'], ['play', 'Creador de Modo Fábrica', 'Consejos para pymes en TikTok', 'o']],
   ];
   const renderBadge = (el, item, n, i) => {
     const [ic, t, s, c] = item;
