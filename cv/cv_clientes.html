@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8" />
+<title>CV Adrian Copa — Consultor de Operaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+@page { size: 816px 1056px; margin: 0; }
+:root { --navy:#0e2150; --navy2:#142b63; --gold:#c9a227; --ink:#16213a; --mut:#5b667c; --soft:#f1f4f9; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background:#fff; }
+body { font-family: 'Lato', sans-serif; color: var(--ink); font-size: 11.6px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { position: relative; width: 816px; height: 1056px; overflow: hidden; page-break-after: always; break-after: page; }
+.side { position:absolute; left:0; top:0; bottom:0; width:266px; background: linear-gradient(180deg,#0e2150,#10275a 60%,#0b1a40); color:#fff; padding: 44px 26px 30px 30px; border-right: 4px solid var(--gold); }
+.main { position:absolute; left:270px; top:0; right:0; bottom:0; }
+.photo { width:158px; height:158px; border-radius:50%; border:4px solid var(--gold); display:block; margin:0 auto 34px; object-fit:cover; background:#fff; }
+.side h4 { font-size:9.6px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:900; margin: 22px 0 9px; padding-bottom:7px; border-bottom:1px solid rgba(255,255,255,.18); }
+.side h4:first-of-type { margin-top: 0; }
+.side small { display:block; font-size:8.2px; letter-spacing:.2em; text-transform:uppercase; color:#9fb0d4; margin-top:9px; }
+.side p, .side li { font-size:11.4px; color:#e8eefb; }
+.side ul { list-style:none; }
+.side li { position:relative; padding-left:14px; margin: 0 0 7px; }
+.side li::before { content:'◆'; position:absolute; left:0; top:1px; color:var(--gold); font-size:7.5px; }
+.side .lead { font-size:10.4px; color:#c5d1ec; margin-bottom:10px; }
+.side .it b { display:block; color:#fff; font-size:11.4px; line-height:1.3; }
+.side .it span { display:block; color:#cfd9ef; font-size:10.6px; margin-bottom:9px; }
+.side .it.mut span { color:#9fb0d4; font-size:9.6px; }
+.hdr { background:#f3f5fa; padding: 34px 30px 16px 38px; border-bottom:3px solid var(--gold); height: 262px; }
+.hdr h1 { font-family:'Playfair Display',serif; font-size:47px; line-height:1; color:var(--navy); font-weight:800; }
+.hdr .role { color:var(--gold); font-weight:900; letter-spacing:.2em; font-size:12.6px; margin: 12px 0 10px; }
+.hdr .kpi { font-size:10.8px; font-weight:900; color:var(--navy); letter-spacing:.02em; margin-bottom:12px; }
+.hdr .kpi em { color:var(--gold); font-style:normal; }
+.hdr .tag { font-family:'Playfair Display',serif; font-size:18px; line-height:1.28; color:var(--navy); font-weight:700; max-width: 540px; }
+.chips { margin-top:13px; display:flex; flex-wrap:wrap; gap:6px; }
+.chips span { font-size:9.6px; font-weight:700; background:var(--navy); color:#fff; padding:4px 10px; border-radius:2px; }
+.chips span:first-child { background:var(--gold); color:#1a1a1a; }
+.body1 { padding: 18px 38px 0 38px; }
+.body1 > p { font-size:11.8px; line-height:1.5; margin-bottom: 14px; }
+.sec { font-size:10.4px; font-weight:900; letter-spacing:.26em; text-transform:uppercase; color:var(--navy); display:flex; align-items:center; gap:12px; margin: 12px 0 9px; }
+.sec::after { content:''; flex:1; height:1px; background:#cfd6e4; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap: 9px 14px; }
+.card { border-left:3px solid var(--gold); padding: 1px 0 1px 9px; }
+.card b { display:block; font-size:11.4px; color:var(--navy); line-height:1.25; margin-bottom:2px; }
+.card span { display:block; font-size:10.2px; color:var(--mut); line-height:1.38; }
+.why { list-style:none; }
+.why li { position:relative; padding-left:18px; margin-bottom:6px; font-size:11.4px; line-height:1.42; }
+.why li::before { content:'✓'; position:absolute; left:0; color:var(--gold); font-weight:900; }
+.exp { padding: 36px 38px 0 38px; }
+.job { margin: 0 0 15px; }
+.job.cur { background:var(--soft); border-left:3px solid var(--gold); padding:10px 14px 8px; border-radius:2px; }
+.job .t { display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+.job h3 { font-size:15.4px; color:var(--navy); font-weight:900; }
+.job .d { color:var(--gold); font-weight:900; font-size:9.8px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+.job .o { color:var(--mut); font-size:10.6px; margin: 1px 0 5px; }
+.job ul { list-style:none; }
+.job li { position:relative; padding-left:13px; margin-bottom:3px; font-size:10.9px; line-height:1.42; }
+.job li::before { content:'◆'; position:absolute; left:0; top:2px; color:var(--gold); font-size:7px; }
+.sub { margin-top:7px; }
+.sub h5 { font-size:11.2px; color:var(--navy); font-weight:900; }
+.sub h5 i { font-style:normal; color:var(--gold); font-size:9.4px; letter-spacing:.06em; margin-left:4px; }
+</style></head><body>
+
+<!-- PÁGINA 1 -->
+<div class="page">
+  <aside class="side">
+    <img class="photo" src="../assets/foto-perfil.jpg" alt="">
+    <h4>Contacto</h4>
+    <small>Teléfono</small><p>+591 75971526</p>
+    <small>Email</small><p>adriancopa365@gmail.com</p>
+    <small>LinkedIn</small><p>linkedin.com/in/adrian-copa-jara</p>
+    <small>Ubicación</small><p>Santa Cruz, Bolivia</p>
+    <h4 style="margin-top:30px">Competencias técnicas</h4>
+    <ul>
+      <li>Planificación de la producción (S&amp;OP, MRP)</li>
+      <li>Control de costos, mermas y rendimiento</li>
+      <li>Gestión de inventarios y logística</li>
+      <li>Sistemas de gestión de calidad (ISO 9001)</li>
+      <li>Mejora continua (Lean, Six Sigma)</li>
+      <li>Desarrollo de producto y márgenes</li>
+      <li>ERP / SAP One</li>
+      <li>Automatización de reportes con IA</li>
+    </ul>
+    <h4>Idiomas</h4>
+    <ul><li><b>Español</b> — nativo</li><li><b>Inglés</b> — lectura técnica de manuales y documentación industrial</li></ul>
+  </aside>
+  <div class="main">
+    <div class="hdr">
+      <h1>Adrian Copa J.</h1>
+      <div class="role">CONSULTOR DE OPERACIONES</div>
+      <div class="kpi">3,5<em>X</em> FACTURACIÓN &nbsp;·&nbsp; INVENTARIO <em>-76%</em> &nbsp;·&nbsp; <em>-90%</em> EN FALLAS DE CALIDAD</div>
+      <div class="tag">Construyo operaciones industriales que venden más, gastan menos y no dependen de una sola persona.</div>
+      <div class="chips"><span>Multiplica ventas sin caos</span><span>Libera capital atrapado</span><span>Blinda la calidad</span><span>Reduce mermas y costos</span><span>Forma equipos autónomos</span><span>Diseña sistemas que escalan</span></div>
+    </div>
+    <div class="body1">
+      <p>He liderado la reestructuración completa de operaciones industriales — producción, planificación, compras, calidad e inventarios — construyendo desde cero las áreas que la empresa nunca tuvo. En una planta de consumo masivo, la facturación mensual se multiplicó por 3,5 y el capital atrapado en inventario bajó 76%, en menos de dos años.</p>
+      <div class="sec">Resultados que hablan por mí</div>
+      <div class="grid">
+        <div class="card"><b>Multipliqué por 3,5 la facturación de una empresa estancada</b><span>Reestructuré planta, planificación y compras: +250% de facturación mensual en menos de dos años, de forma sostenible.</span></div>
+        <div class="card"><b>Liberé capital atrapado: inventario -76%</b><span>El capital inmovilizado en inventario cayó más de tres cuartas partes — dinero que la empresa recuperó para operar y reinvertir.</span></div>
+        <div class="card"><b>Recuperé 20 puntos de rendimiento de planta</b><span>Rediseñé los procesos de producción: mermas -30%, rendimiento de línea +20%, sin invertir en maquinaria nueva.</span></div>
+        <div class="card"><b>Eliminé el 90% de las fallas de calidad</b><span>En Unilever, pasé de 250 no conformidades al año a 1–2 por mes, cambiando el enfoque de correctivo a preventivo a nivel nacional.</span></div>
+      </div>
+      <div class="sec">Dónde genero valor</div>
+      <div class="grid">
+        <div class="card"><b>Escalo planta sin subir costos</b><span>Rediseño de procesos, control de mermas y rendimiento — más volumen sin más gasto.</span></div>
+        <div class="card"><b>Convierto la planificación en ventaja</b><span>S&amp;OP, MRP y plan de compras con seguimiento, para decidir con datos y no a ciegas.</span></div>
+        <div class="card"><b>Protejo el margen desde el costo</b><span>Actualizo costos y márgenes, y desarrollo producto con criterio financiero.</span></div>
+        <div class="card"><b>Blindo la calidad para cualquier auditoría</b><span>Sistemas de gestión documentados; 100% de cumplimiento interno y externo.</span></div>
+        <div class="card"><b>Saco la caja de la bodega</b><span>Reduzco capital inmovilizado y estandarizo despachos — la caja deja de quedar atrapada en inventario.</span></div>
+        <div class="card"><b>Dejo equipos que no necesitan supervisión</b><span>Formo mandos medios y planes de acción — el resultado se sostiene sin mí.</span></div>
+      </div>
+      <div class="sec">Por qué me contratan</div>
+      <ul class="why">
+        <li>Porque no solo diagnostico — <b>implemento y dejo el sistema funcionando</b>, con resultados medidos, no en promesas.</li>
+        <li>Porque hablo el idioma de la planta y el del estado de resultados — <b>conecto la operación con la caja</b>.</li>
+        <li>Porque cuando me voy de un puesto, el equipo que formé <b>sigue sosteniendo el resultado</b>.</li>
+        <li>Porque soy <b>autodidacta</b>: más de 50 cursos y certificaciones autogestionados en operaciones, proyectos, ventas y finanzas, que aplico directo al negocio (detalle en la última página).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="page">
+  <aside class="side">
+    <h4 style="margin-top:0">Formación</h4>
+    <div class="it"><b>Ingeniería Química</b><span>Universidad Mayor de San Simón · 2007–2012</span></div>
+    <div class="it"><b>Diplomado en Educación Virtual (E-learning)</b><span>Universidad Mayor de San Simón · 2021</span></div>
+    <div class="it mut"><span style="margin-top:-6px">Aptitud: ISO 22000 (inocuidad alimentaria)</span></div>
+    <div class="it"><b>Diplomado en Avalúos y Marketing Inmobiliario</b><span>UPB · 2020</span></div>
+    <h4>Certificaciones</h4>
+    <div class="it"><b>Inteligencia Artificial (Claude) aplicada a pymes</b><span>Anthropic</span></div>
+    <div class="it"><b>Lean y Six Sigma</b><span>LinkedIn Learning</span></div>
+    <div class="it"><b>ISO 9001:2015</b><span>Ibnorca</span></div>
+    <p class="lead" style="font-size:9.6px;color:#9fb0d4">+47 cursos adicionales en operaciones, proyectos, ventas y finanzas — detalle en la última página.</p>
+    <h4>Publicaciones · Autor</h4>
+    <p class="lead">Documento y comparto lo que aprendo — dentro y fuera de la empresa.</p>
+    <div class="it"><b>Supervisor de Producción: Datos · Lean · IA</b><span>Guía práctica de 5 días · 27 capítulos para liderar planta con datos, Lean e IA</span></div>
+    <div class="it"><b>12 pasos para tener éxito en tu primer trabajo</b><span>Amazon · guía para quienes inician su carrera</span></div>
+    <div class="it"><b>7 pasos para llegar a ser jefe</b><span>Hotmart · método para crecer a posiciones de liderazgo</span></div>
+    <div class="it"><b>Manual definitivo de lavavajillas</b><span>Hotmart · manual técnico de formulación y producción</span></div>
+  </aside>
+  <div class="main"><div class="exp">
+    <div class="sec" style="margin-top:0;margin-bottom:12px">Experiencia profesional</div>
+
+    <div class="job cur">
+      <div class="t"><h3>Consultor Independiente</h3><span class="d">2024 – Actualidad</span></div>
+      <div class="o">Pymes · Operaciones, calidad y mejora continua</div>
+      <ul>
+        <li>Asesoro a pequeñas y medianas empresas que buscan ordenar su operación y reducir costos.</li>
+        <li>Diagnóstico y rediseño de procesos, planificación de la producción (S&amp;OP, MRP) y control de costos, mermas e inventarios.</li>
+        <li>Implemento el sistema y lo dejo funcionando: procedimientos estandarizados, indicadores y equipos que sostienen el resultado.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Gerente Comercial</h3><span class="d">Jun. 2023 – Ene. 2024</span></div>
+      <div class="o">Fabrione</div>
+      <ul><li>Diseño de planes comerciales y campañas de mercadotecnia; desarrollo de ventas mayoristas B2B y gestión de cuentas clave.</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Gerente Regional</h3><span class="d">Feb. 2023 – Jun. 2023</span></div>
+      <div class="o">kocha Group · Cochabamba</div>
+      <ul><li>Gestión integral de una pyme (ventas, producción y finanzas): ventas mensuales +157%, tiempos de entrega -20% y 15% de ahorros operativos.</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Ingeniero de Producción</h3><span class="d">Jun. 2022 – Ene. 2023</span></div>
+      <div class="o">Industrias Luri SRL · Consumo masivo</div>
+      <ul>
+        <li><b>Cumplimiento del plan de producción:</b> programación, seguimiento diario de la línea y coordinación de turnos para entregar lo planificado.</li>
+        <li><b>Mejoras de proceso:</b> detección de pérdidas y cuellos de botella en planta, e implementación de mejoras en la operación.</li>
+        <li><b>Estandarización:</b> procedimientos y métodos de trabajo documentados para que el resultado no dependa de una sola persona.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Desarrollo e Investigación</h3><span class="d">2021 · 3 meses</span></div>
+      <div class="o">INDUQUIN · Productos de limpieza</div>
+      <ul>
+        <li>Desarrollo e investigación de fórmulas para productos de limpieza del hogar.</li>
+        <li>Pruebas de estabilidad, rendimiento y control de calidad de nuevas formulaciones en laboratorio.</li>
+        <li>Documentación técnica de especificaciones y procesos para escalar de laboratorio a producción.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Jefe de Aseguramiento de la Calidad</h3><span class="d">Ene. 2020 – Sept. 2021</span></div>
+      <div class="o">Unilever · Bolivia</div>
+      <ul>
+        <li>Lideré la transformación del equipo de calidad de un enfoque correctivo a uno preventivo a nivel nacional en 2 años: no conformidades de 250 casos/año a 1–2 por mes (-90%).</li>
+        <li>100% de cumplimiento en auditorías internas y externas; reducción del tiempo de lanzamiento de productos en 15%; cierre de no conformidades con proveedores mediante investigación de causa raíz.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="t"><h3>Astrix S.A.</h3><span class="d">Ene. 2015 – Dic. 2019</span></div>
+      <div class="o">Cochabamba · Home Care y Personal Care</div>
+      <div class="sub"><h5>Jefe de Aseguramiento de la Calidad <i>FEB. 2019 – DIC. 2019</i></h5><ul><li>Eficiencia de procesos auditados +20%, defectos -15% y costos de materiales -10%.</li></ul></div>
+      <div class="sub"><h5>Supervisor de Elaboración <i>ENE. 2017 – ENE. 2019</i></h5><ul><li>Transformación del área de elaboración de ineficiente a alta eficiencia mediante generación de datos y estandarización: ahorros aproximados de USD 20.000/año (desperdicios, tratamiento de aguas y reproceso) y 99% de exactitud de inventarios con SAP One.</li></ul></div>
+      <div class="sub"><h5>Asistente de Procesos <i>ENE. 2015 – ENE. 2017</i></h5><ul><li>Mejora de eficiencia en envasado y soplado PET-PEAD (+15%); ahorros estimados de USD 15.000/año por mejora continua; arranque de planta de tratamiento de aguas residuales con tecnología DAF.</li></ul></div>
+    </div>
+  </div></div>
+</div>
+</body></html>
