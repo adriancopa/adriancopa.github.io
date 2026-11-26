@@ -54,6 +54,7 @@ def index():
     h = h.replace('data-c="nova"', 'data-c="gop"')
     h = h.replace("<i>Novaquimica</i>", "<i>Consumo masivo</i>").replace("<small>Novaquimica</small>", "<small>Consumo masivo</small>")
     h = comunes(h, "")
+    h = h.replace("../assets/CV_Adrian_Copa_2026.pdf", "../assets/CV_Adrian_Copa_Clientes.pdf")
     h = rep(h, f'{BASE}/clientes/"', f'{BASE}/clientes/"')  # canonical ya apunta a la carpeta
     return h
 
